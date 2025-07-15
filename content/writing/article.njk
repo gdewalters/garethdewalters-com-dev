@@ -1,12 +1,43 @@
----
-layout: layouts/article.njk
----
+{# content/writing/article.njk - This file generates individual article post content #}
+{# All its config comes from content/writing/writing.11tydata.js #}
 
 {% set title = post.headline %}
 {% set lede = post.standfirst %}
 {% set featuredImage = post.heroImage.url %}
 {% set featuredImageAltText = post.heroImage.alt %}
 
-{% block content %}
-  {{ post.body | renderRichTextAsHtml }}
-{% endblock %}
+<article>
+    {# 'post' is the alias defined in article.11tydata.js pagination #}
+    <h1>{{ post.fields.headline }}</h1> {# Use headline as per your Contentful model #}
+    {% if post.fields.datePublished %}
+        <p class="post-meta">Published: {{ post.fields.datePublished | readableDate("yyyy-MM-dd") }}</p>
+    {% endif %}
+
+    {# Display main image if available #}
+    {% if post.mainImage %}
+        <figure>
+            {% contentfulImage
+                post.mainImage,
+                post.mainImage.alt,
+                [400, 800, 1200],
+                ["webp", "jpeg"],
+                "(min-width: 800px) 800px, 100vw"
+            %}
+            {% if post.mainImage.caption %}
+                <figcaption>{{ post.mainImage.caption }}</figcaption>
+            {% endif %}
+            {% if post.mainImage.photographer %}
+                <p class="text-sm text-gray-500">Photo by: {{ post.mainImage.photographer }}</p>
+            {% endif %}
+            {% if post.mainImage.licence %}
+                <p class="text-xs text-gray-400">Licence: {{ post.mainImage.licence }}</p>
+            {% endif %}
+        </figure>
+    {% endif %}
+
+    <div class="post-body">
+        {# renderRichTextAsHtml is the filter you added in eleventy.config.js #}
+        {{ post.fields.body | renderRichTextAsHtml | safe }}
+        {{ post.body | renderRichTextAsHtml }}
+    </div>
+</article>
