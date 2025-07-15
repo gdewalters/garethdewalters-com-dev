@@ -1,0 +1,12 @@
+---
+layout: layouts/article.njk
+---
+
+{% set title = post.headline %}
+{% set lede = post.standfirst %}
+{% set featuredImage = post.heroImage.url %}
+{% set featuredImageAltText = post.heroImage.alt %}
+
+{% block content %}
+  {{ post.body | renderRichTextAsHtml }}
+{% endblock %}
