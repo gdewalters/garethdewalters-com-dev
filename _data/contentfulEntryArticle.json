@@ -1,0 +1,278 @@
+{
+  "entryTitle": "L2 - Writing - Leverage agile frameworks",
+  "headline": "Leverage agile frameworks",
+  "standfirst": "Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.",
+  "slug": "leverage-agile-frameworks",
+  "seoMetaData": {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "uemz79q6jwml"
+        }
+      },
+      "id": "1yBZAAaECQxMuM92HJ9nah",
+      "type": "Entry",
+      "createdAt": "2023-09-23T23:07:08.632Z",
+      "updatedAt": "2023-09-23T23:08:09.946Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 8,
+      "revision": 2,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "metaSeo"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "entryTitle": "Gwenllian Walters - the case of the disappearing great grandmother",
+      "seoTitle": "Gwenllian Walters - the disappearing great grandmother",
+      "metaDescription": "On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian register",
+      "seoNoIndex": false,
+      "seoNoFollow": false,
+      "openGraphLocale": "en_NZ"
+    }
+  },
+  "heroImage": {
+    "url": "https://images.ctfassets.net/uemz79q6jwml/2cmAuD1pcDkBA3QICm13St/853b1e6a9bdbfc69ff98f1add90c7c9a/mold-cape.jpg",
+    "alt": "Mold cape",
+    "caption": null,
+    "photographer": null,
+    "licence": null,
+    "details": {
+      "size": 858784,
+      "image": {
+        "width": 1263,
+        "height": 779
+      }
+    }
+  },
+  "datePublished": "2025-07-12T21:00+13:00",
+  "body": {
+    "data": {},
+    "content": [
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "Section header",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "heading-2"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. ",
+            "nodeType": "text"
+          },
+          {
+            "data": {
+              "uri": "https://en.wikipedia.org/wiki/Nanotechnology"
+            },
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Nanotechnology",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "hyperlink"
+          },
+          {
+            "data": {},
+            "marks": [],
+            "value": " immersion along the information highway will close the loop on focusing solely on the bottom line.",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "kdiff-js",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": " // this is a command",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": " function myCommand() {",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "+  let counter = 0;",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "-  let counter = 1;",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": "   counter++;",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": " }\n",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": " // Test with a line break above this line.",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      },
+      {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "marks": [],
+            "value": " console.log('Test');\n",
+            "nodeType": "text"
+          }
+        ],
+        "nodeType": "paragraph"
+      }
+    ],
+    "nodeType": "document"
+  },
+  "mainImage": null,
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "59VizjowrOWMikoKY91Cgx",
+    "type": "Entry",
+    "createdAt": "2025-07-12T09:01:07.238Z",
+    "updatedAt": "2025-07-13T03:16:36.030Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 23,
+    "revision": 3,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "composeArticle"
+      }
+    },
+    "locale": "en-US"
+  }
+}
