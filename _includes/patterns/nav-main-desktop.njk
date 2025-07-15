@@ -10,14 +10,14 @@
               {% set activeClass = "" %}
               {% set ariaCurrentAttr = "" %}
 
-              {# Check if page.url is defined BEFORE using startsWith #}
-              {% if page.url is defined and item.url === page.url %}
+              {# Ensure page.url is truthy before using startsWith #}
+              {% if page.url and item.url === page.url %}
                 {% set activeClass = "is-active" %}
                 {% set ariaCurrentAttr = "aria-current=\"page\"" %}
-              {# Check if page.url is defined BEFORE using startsWith #}
-              {% elseif page.url is defined and item.url !== "/" and page.url.startsWith(item.url) %}
+              {# Ensure page.url is truthy before using startsWith #}
+              {% elseif page.url and item.url !== "/" and page.url.startsWith(item.url) %}
                 {% set activeClass = "is-active" %}
-                {% set ariaCurrentAttr = "data-current=\"section\"" %} 
+                {% set ariaCurrentAttr = "data-current=\"section\"" %}
               {% endif %}
 
               <a href="{{ item.url }}" class="nav-link {{ activeClass }}" {{ ariaCurrentAttr | safe }}>
