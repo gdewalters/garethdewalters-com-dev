@@ -8,9 +8,9 @@
 
 <article>
     {# 'post' is the alias defined in article.11tydata.js pagination #}
-    <h1>{{ post.fields.headline }}</h1> {# Use headline as per your Contentful model #}
-    {% if post.fields.datePublished %}
-        <p class="post-meta">Published: {{ post.fields.datePublished | readableDate("yyyy-MM-dd") }}</p>
+    <h1>{{ post.headline }}</h1>
+    {% if post.datePublished %}
+        <p class="post-meta">Published: {{ post.datePublished | readableDate("yyyy-MM-dd") }}</p>
     {% endif %}
 
     {# Display main image if available #}
@@ -37,7 +37,6 @@
 
     <div class="post-body">
         {# renderRichTextAsHtml is the filter you added in eleventy.config.js #}
-        {{ post.fields.body | renderRichTextAsHtml | safe }}
         {{ post.body | renderRichTextAsHtml }}
     </div>
 </article>
