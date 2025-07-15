@@ -1,0 +1,41 @@
+---js
+{
+    // Data for the Eleventy Navigation plugin
+    eleventyNavigation: {
+        key: "Home",
+        order: 1,
+		parent: "mainNav"
+    },
+    
+    // Other page-specific front matter
+    layout: "layouts/home.njk",
+    title: "My home page",
+	permalink: "/index.html",
+
+    // This is where you put other page-specific data
+    // It becomes available as `numberOfLatestPostsToShow` in your template
+    numberOfLatestPostsToShow: 3, 
+}
+---
+
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{# include "postslist.njk" #}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}

@@ -1,0 +1,163 @@
+---
+layout: layouts/base.njk
+---
+
+      <article class="w-full max-w-7xl mx-auto">
+        <!-- Article Hero Section -->
+        <section class="mb-16 text-center">
+
+            <!-- Article title -->
+            <h1 class="font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl mb-6 text-left sm:text-center" id="gwenllian-walters-the-case-of-the-disappearing-great-grandmother">{{ title }}</h1>
+          
+            <!-- Author and meta information -->
+            <div class="article-entry-meta flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <span class="article-entry-meta-icon">
+                            <span class="screen-reader-text"> Article author </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mr-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"></path>
+                                </svg>
+                        </span>
+                        <span class="article-entry-meta-text">
+                            By <a href="/" class="underline decoration-2 underline-offset-3 hover:no-underline">Gareth de Walters</a> on <a href="/" rel="category" class="underline decoration-2 underline-offset-3 hover:no-underline">Genealogy</a>
+                        </span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <span class="article-entry-meta-text">
+                            <span class="screen-reader-text invisible"> Article date </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mr-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path>
+                                </svg>
+                        </span>
+                        <span class="article-entry-meta-text">
+                            Published on <a href="#">5 July 2025</a>
+                        </span>
+                    </li>
+            </div>
+          
+            <!-- Article description / lede paragraph -->
+            <p class="text-foreground text-xl font-medium max-w-2xl mx-auto mb-8 text-left sm:text-center">
+              {{ lede }}
+            </p>
+
+            <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto">
+                {# Example 2: Using an image path from front matter #}
+                {# Assuming your content file (e.g., src/posts/my-post.md) has: featuredImage: "./src/images/post-hero.jpg" #}
+
+                {% if featuredImage %}
+                    <img src="{{ featuredImage }}" alt="{{ featuredImageAltText }}" class="">
+                {% endif %}
+
+<!--
+                <picture>
+                  <source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=avif&via=transform 4807w">
+                  <source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=webp&via=transform 4807w">
+                  <img loading="lazy" decoding="async" src="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=jpeg&via=transform" alt="Responsive Web Design" class="w-full h-96 object-cover" width="4807" height="3054">
+                </picture>
+-->
+
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="flex justify-center">
+            <!-- The 'prose' class from @tailwindcss/typography plugin will style the content -->
+            <div class="prose max-w-prose w-full">
+
+              {{ content | safe }}
+
+            </div>
+        </section>
+      </article>
+
+      <!-- Related Articles Section (repurposed from homepage) -->
+      <section class="bg-secondary/30 py-20 mt-20">
+        <div class="w-full max-w-7xl mx-auto">
+          <div class="mb-12 flex items-end justify-between">
+            <div>
+              <h2 class="mb-2 font-serif text-3xl font-medium">More Articles You Might Like</h2>
+              <p class="text-muted-foreground max-w-xl">Discover other insights and stories from my collection.</p>
+            </div>
+            <a href="#" class="group hidden items-center text-sm font-medium tracking-wider uppercase md:inline-flex">
+              View All
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transition-transform group-hover:translate-x-1">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            <!-- Article Card 1 -->
+            <article class="article-card overflow-hidden rounded-lg">
+              <a href="#" class="block">
+                <div class="overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="Culinary Traditions" class="h-64 w-full object-cover" />
+                </div>
+                <div class="p-6">
+                  <div class="mb-3">
+                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Lifestyle </span>
+                  </div>
+                  <h3 class="mb-3 font-serif text-xl font-medium">The Art of Slow Living in Modern Cities</h3>
+                  <p class="text-muted-foreground mb-4 text-sm">Exploring how urban dwellers are embracing mindfulness and intentional living amidst the chaos.</p>
+                  <div class="text-muted-foreground flex items-center justify-between text-xs">
+                    <span>Emma Chen</span>
+                    <span>May 23, 2023</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Article Card 2 -->
+            <article class="article-card overflow-hidden rounded-lg">
+              <a href="#" class="block">
+                <div class="overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="Culinary Traditions" class="h-64 w-full object-cover" />
+                </div>
+                <div class="p-6">
+                  <div class="mb-3">
+                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Food </span>
+                  </div>
+                  <h3 class="mb-3 font-serif text-xl font-medium">Culinary Traditions Reimagined</h3>
+                  <p class="text-muted-foreground mb-4 text-sm">How chefs are preserving cultural heritage while innovating with modern techniques.</p>
+                  <div class="text-muted-foreground flex items-center justify-between text-xs">
+                    <span>Marcus Johnson</span>
+                    <span>April 15, 2023</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Article Card 3 -->
+            <article class="article-card overflow-hidden rounded-lg">
+              <a href="#" class="block">
+                <div class="overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Digital Craftsmanship" class="h-64 w-full object-cover" />
+                </div>
+                <div class="p-6">
+                  <div class="mb-3">
+                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Design </span>
+                  </div>
+                  <h3 class="mb-3 font-serif text-xl font-medium">The New Era of Digital Craftsmanship</h3>
+                  <p class="text-muted-foreground mb-4 text-sm">Artisans embracing technology to create unique pieces that blur the line between traditional and digital.</p>
+                  <div class="text-muted-foreground flex items-center justify-between text-xs">
+                    <span>Nicole Patel</span>
+                    <span>June 7, 2023</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="mt-12 text-center md:hidden">
+            <a href="#" class="group inline-flex items-center text-sm font-medium tracking-wider uppercase">
+              View All Articles
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transition-transform group-hover:translate-x-1">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
