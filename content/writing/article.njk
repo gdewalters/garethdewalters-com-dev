@@ -15,6 +15,7 @@
 
     {# Display main image if available #}
     {% if post.mainImage %}
+    <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto"> 
         <figure>
             {% contentfulImage
                 post.mainImage,
@@ -33,10 +34,15 @@
                 <p class="text-xs text-gray-400">Licence: {{ post.mainImage.licence }}</p>
             {% endif %}
         </figure>
+    </div>
     {% endif %}
 
-    <div class="post-body">
+    
+    
+
+
+    <div class="prose max-w-prose w-full">
         {# renderRichTextAsHtml is the filter you added in eleventy.config.js #}
-        {{ post.body | renderRichTextAsHtml }}
+        {{ post.body | renderRichTextAsHtml | safe }}
     </div>
 </article>

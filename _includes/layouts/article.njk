@@ -1,13 +1,12 @@
 ---
 layout: layouts/base.njk
 ---
-
       <article class="w-full max-w-7xl mx-auto">
         <!-- Article Hero Section -->
         <section class="mb-16 text-center">
 
             <!-- Article title -->
-            <h1 class="font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl mb-6 text-left sm:text-center" id="gwenllian-walters-the-case-of-the-disappearing-great-grandmother">{{ title }}</h1>
+            <h1 class="font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl mb-6 text-left sm:text-center" id="gwenllian-walters-the-case-of-the-disappearing-great-grandmother">{{ post.headline }}</h1>
           
             <!-- Author and meta information -->
             <div class="article-entry-meta flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-2 mb-6">
@@ -38,7 +37,7 @@ layout: layouts/base.njk
           
             <!-- Article description / lede paragraph -->
             <p class="text-foreground text-xl font-medium max-w-2xl mx-auto mb-8 text-left sm:text-center">
-              {{ lede }}
+              {{ post.standfirst }}
             </p>
 
             <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto">
@@ -46,16 +45,17 @@ layout: layouts/base.njk
                 {# Assuming your content file (e.g., src/posts/my-post.md) has: featuredImage: "./src/images/post-hero.jpg" #}
 
                 {% if featuredImage %}
-                    <img src="{{ featuredImage }}" alt="{{ featuredImageAltText }}" class="">
+                    <img src="" alt="{{ featuredImageAltText }}" class="">
                 {% endif %}
 
-<!--
-                <picture>
-                  <source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=avif&via=transform 4807w">
-                  <source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=webp&via=transform 4807w">
-                  <img loading="lazy" decoding="async" src="/.11ty/image/?src=https%3A%2F%2Fgarethdewalters.com%2Fimg%2FTo-IVyzgio-4807.jpeg&width=4807&format=jpeg&via=transform" alt="Responsive Web Design" class="w-full h-96 object-cover" width="4807" height="3054">
-                </picture>
--->
+
+              {% contentfulImage
+                  post.heroImage,
+                  post.Image.alt,
+                  [1200],
+                  ["webp", "jpeg"],
+                  "(min-width: 1024px) 1024px, 100vw"
+              %}
 
             </div>
         </section>
@@ -65,7 +65,7 @@ layout: layouts/base.njk
             <!-- The 'prose' class from @tailwindcss/typography plugin will style the content -->
             <div class="prose max-w-prose w-full">
 
-              {{ content | safe }}
+              {{ post.body | renderRichTextAsHtml | safe }}
 
             </div>
         </section>
