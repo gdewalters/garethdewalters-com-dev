@@ -1,0 +1,193 @@
+JSON Preview
+
+{
+  "name": "Compose: Page",
+  "description": "The default page content type.",
+  "displayField": "entryTitle",
+  "fields": [
+    {
+      "id": "entryTitle",
+      "name": "Entry title",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "pageTitle",
+      "name": "Page title",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [
+        {
+          "size": {
+            "max": 58
+          }
+        }
+      ],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "slug",
+      "name": "Slug",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "parentPage",
+      "name": "Parent page",
+      "type": "Link",
+      "localized": false,
+      "required": false,
+      "validations": [
+        {
+          "linkContentType": [
+            "composePage"
+          ]
+        }
+      ],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Entry"
+    },
+    {
+      "id": "seoMetaData",
+      "name": "SEO meta data",
+      "type": "Link",
+      "localized": false,
+      "required": true,
+      "validations": [
+        {
+          "linkContentType": [
+            "metaSeo"
+          ]
+        }
+      ],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Entry"
+    },
+    {
+      "id": "mainImage",
+      "name": "Main image",
+      "type": "Link",
+      "localized": false,
+      "required": false,
+      "validations": [
+        {
+          "linkContentType": [
+            "mediaImageAsset"
+          ]
+        }
+      ],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Entry"
+    },
+    {
+      "id": "datePublished",
+      "name": "Date published",
+      "type": "Date",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "dateUpdated",
+      "name": "Date updated",
+      "type": "Date",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "contentSections",
+      "name": "Content sections",
+      "type": "Array",
+      "localized": false,
+      "required": true,
+      "validations": [
+        {
+          "size": {
+            "min": 1
+          }
+        }
+      ],
+      "disabled": false,
+      "omitted": false,
+      "items": {
+        "type": "Link",
+        "validations": [
+          {
+            "linkContentType": [
+              "componentRichTextPanel",
+              "mediaImageAsset",
+              "mediaVideoAsset",
+              "componentFileGroup"
+            ]
+          }
+        ],
+        "linkType": "Entry"
+      }
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "composePage",
+    "type": "ContentType",
+    "createdAt": "2023-09-23T22:04:13.573Z",
+    "updatedAt": "2025-07-18T08:11:57.266Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 35,
+    "publishedAt": "2025-07-18T08:11:57.266Z",
+    "firstPublishedAt": "2023-09-23T22:04:14.237Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "publishedCounter": 18,
+    "version": 36,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "urn": "crn:contentful:::content:spaces/uemz79q6jwml/environments/master/content_types/composePage"
+  }
+}
