@@ -23,9 +23,9 @@
             <h2 class="font-serif text-3xl font-medium mb-8 text-left">Recent articles</h2>
             <div class="grid grid-cols-1 gap-8">
 
-            {% if composeArticle and composeArticle.length > 0 %}
-                
-                {% for article in composeArticle %}
+            {% if getContentfulArticles and getContentfulArticles.length > 0 %}
+
+                {% for article in getContentfulArticles %}
                 
                 <!-- Article card  (text only) -->
                 <article class="article-card rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-300">

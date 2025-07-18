@@ -1,9 +1,9 @@
 // content/writing/writing.11tydata.js
 
 export default {
-  // Generate one page per composeArticle entry
+  // Generate one page per Contentful article entry
   pagination: {
-    data: "composeArticle",
+    data: "getContentfulArticles",
     size: 1,
     alias: "post",
   },
