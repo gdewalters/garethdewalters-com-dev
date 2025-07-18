@@ -5,7 +5,7 @@ export default async function() { // ESM export default
   // Initialize Contentful client with your credentials
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   });
 
   try {
@@ -79,6 +79,11 @@ export default async function() { // ESM export default
         sys: item.sys // Keep sys data for Eleventy's internal use (e.g., eleventyNavigation, if needed)
       };
     });
+
+    // --- ADD THIS CONSOLE.LOG STATEMENT ---
+    console.log('--- DEBUG: Raw Contentful API Response ---');
+    console.log(JSON.stringify(entries, null, 2));
+    console.log('--- END DEBUG: Raw Contentful API Response ---');
 
     return articles;
 
