@@ -45,13 +45,12 @@ layout: layouts/base.njk
             <!-- Main image -->
             {% if post.mainImage %}
             <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto">
-              {% contentfulImage
-                post.mainImage,
-                post.mainImage.alt,
-                [400, 800, 1200],
-                ["webp", "jpeg"],
-                "(min-width: 800px) 800px, 100vw"
-              %}
+              <img
+                src="{{ post.mainImage.url }}"
+                alt="{{ post.mainImage.alt }}"
+                width="1024"
+                height="384"
+                class="w-full aspect-[8/3] object-cover">
             </div>
             {% endif %}
         </section>
