@@ -41,24 +41,16 @@ layout: layouts/base.njk
             </p>
 
             <!-- Main image -->
+            {% if post.mainImage %}
             <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto">
-                {# Example 2: Using an image path from front matter #}
-                {# Assuming your content file (e.g., src/posts/my-post.md) has: featuredImage: "./src/images/post-hero.jpg" #}
-
-                {% if featuredImage %}
-                    <img src="" alt="{{ featuredImageAltText }}" class="">
-                {% endif %}
-
-
-              {% contentfulImage
-                  post.heroImage,
-                  post.Image.alt,
-                  [1200],
-                  ["webp", "jpeg"],
-                  "(min-width: 1024px) 1024px, 100vw"
-              %}
-
+              <img
+                src="{{ post.mainImage.url }}"
+                alt="{{ post.mainImage.alt }}"
+                width="1024"
+                height="384"
+                class="w-full aspect-[8/3] object-cover">
             </div>
+            {% endif %}
         </section>
 
         <!-- Article Content -->
