@@ -14,16 +14,11 @@
 
       // Mobile menu toggle
       const menuButton = document.querySelector('button[aria-label="Toggle menu"]');
-      const closeButton = document.querySelector('button[aria-label="Close menu"]');
       const mobileNav = document.querySelector('.fixed.inset-0.z-40');
 
-      if (menuButton && closeButton && mobileNav) {
+      if (menuButton && mobileNav) {
         menuButton.addEventListener('click', function() {
-          mobileNav.classList.remove('translate-x-full');
-        });
-
-        closeButton.addEventListener('click', function() {
-          mobileNav.classList.add('translate-x-full');
+          mobileNav.classList.toggle('translate-x-full');
         });
       }
 
