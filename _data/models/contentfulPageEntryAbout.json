@@ -1,0 +1,419 @@
+{
+  "entryTitle": "META - L1 - About this site",
+  "pageTitle": "About this site",
+  "slug": "about",
+  "seoMetaData": {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "uemz79q6jwml"
+        }
+      },
+      "id": "7MBXoTBERKNoAsPBpXTY9f",
+      "type": "Entry",
+      "createdAt": "2025-07-18T08:30:49.151Z",
+      "updatedAt": "2025-07-18T08:30:49.151Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 2,
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "metaSeo"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "entryTitle": "META - L1 - Colophon",
+      "seoTitle": "Colophon",
+      "seoNoIndex": false,
+      "seoNoFollow": false,
+      "openGraphLocale": "en_NZ"
+    }
+  },
+  "datePublished": "2025-07-20T00:00+12:00",
+  "contentSections": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "uemz79q6jwml"
+          }
+        },
+        "id": "1OhFl7t5vutXWIcuWJYZpj",
+        "type": "Entry",
+        "createdAt": "2025-07-20T07:57:01.778Z",
+        "updatedAt": "2025-07-20T07:57:01.778Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "componentRichTextPanel"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "entryTitle": "META - L1 - About this site",
+        "heading": "About Gareth de Walters",
+        "standfirst": "Summary",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "I make websites",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "I'm an Auckland-based website manager. I've produced websites and digtal experiences for the British Film Institute, the University of Auckland, Auckland War Memorial Museum, Vodafone, Heart Foundation and Chorus.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This is my personal site where I write about the web, genealogy, history, music, and food.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Work experience",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "I orginally trained to be an archaelogist, but after moving to England in investigate a masters in forensic archaeolgy I started working for the webhost Rapidsite, and have worked in the world of web ever since.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Rapidsite was bought out by Verio/NTT, and after that I joined the web team and the amazing marketing and eductaion teams at the British Film Institute. Since then I've worked for public service and private organisations. I'm now the Websites Lead at Chorus where I work between marketing and technology teams to deliver a variety of digital experiences and channels.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "You can read more about my experience on ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "hyperlink",
+                  "data": {
+                    "uri": "https://www.linkedin.com/in/gdewalters/"
+                  },
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "LinkedIn",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "text",
+                  "value": ".",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Colophon",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-3",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Essential apps",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This site is published in Auckland, New Zealand using the Eleventy static site generator.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This site's template is based on a slightly amended version of the Qurno theme by Platol.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This site is produced using:",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "unordered-list",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Bear",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Visual Studio Code",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Pixelmator Pro",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "GitHub Desktop",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-3",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Site logo",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "The site logo incorporates the gules (red) three chevronels argent (silvery white) from the flag of Glamorgan (yn Gymraeg: Baner Morgannwg). That design was in turn taken from the arms of Iestyn ap Gwrgant, the last independent ruler of Glamorgan – the region where many of my Welsh family comes from.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-3",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Code and hosting set-up",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "I use Git for version control, Github to store the repository, and Netlify for website hosting.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "mainImage": null,
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "6Q96jcdFbNmzlFw6rkjuI3",
+    "type": "Entry",
+    "createdAt": "2025-07-20T07:52:51.974Z",
+    "updatedAt": "2025-07-20T07:59:37.930Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 8,
+    "revision": 2,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "composePage"
+      }
+    },
+    "locale": "en-US"
+  }
+}
