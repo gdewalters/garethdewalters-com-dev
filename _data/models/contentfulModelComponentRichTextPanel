@@ -1,0 +1,126 @@
+{
+  "name": "Component: Rich text panel",
+  "description": "The component for bespoke body copy.",
+  "displayField": "entryTitle",
+  "fields": [
+    {
+      "id": "entryTitle",
+      "name": "Entry title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "heading",
+      "name": "Heading",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "standfirst",
+      "name": "Standfirst",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "body",
+      "name": "Body",
+      "type": "RichText",
+      "localized": false,
+      "required": true,
+      "validations": [
+        {
+          "enabledMarks": [
+            "bold",
+            "italic",
+            "code",
+            "superscript",
+            "subscript"
+          ],
+          "message": "Only bold, italic, code, superscript, and subscript marks are allowed"
+        },
+        {
+          "enabledNodeTypes": [
+            "heading-2",
+            "heading-3",
+            "heading-4",
+            "unordered-list",
+            "ordered-list",
+            "blockquote",
+            "hr",
+            "table",
+            "hyperlink",
+            "entry-hyperlink",
+            "asset-hyperlink",
+            "embedded-entry-inline",
+            "embedded-asset-block"
+          ],
+          "message": "Only heading 2, heading 3, heading 4, unordered list, ordered list, quote, horizontal rule, table, link to Url, link to entry, link to asset, inline entry, and asset nodes are allowed"
+        },
+        {
+          "nodes": {}
+        }
+      ],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "componentRichTextPanel",
+    "type": "ContentType",
+    "createdAt": "2023-09-23T22:42:23.833Z",
+    "updatedAt": "2023-09-23T22:42:24.337Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 1,
+    "publishedAt": "2023-09-23T22:42:24.337Z",
+    "firstPublishedAt": "2023-09-23T22:42:24.337Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "publishedCounter": 1,
+    "version": 2,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "urn": "crn:contentful:::content:spaces/uemz79q6jwml/environments/master/content_types/componentRichTextPanel"
+  }
+}
