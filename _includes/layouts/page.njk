@@ -13,20 +13,9 @@ layout: layouts/base.njk
               {{ post.standfirst }}
             </p>
 
-            <!-- Main image -->
-            {% if post.mainImage %}
-            <div class="overflow-hidden rounded-lg mb-12 max-w-5xl mx-auto">
-              <img
-                src="{{ post.mainImage.url }}"
-                alt="{{ post.mainImage.alt }}"
-                width="1024"
-                height="384"
-                class="w-full aspect-[8/3] object-cover">
-            </div>
-            {% endif %}
         </section>
 
-        <!-- Article Content -->
+        <!-- Page content -->
         <section class="flex justify-center">
             <!-- The 'prose' class from @tailwindcss/typography plugin will style the content -->
             <div class="prose max-w-prose w-full">
