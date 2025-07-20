@@ -1,15 +1,22 @@
 import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
-	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
-	});
+  eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+                // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+                // Handle both Date objects and ISO date strings from Contentful
+                const dt = dateObj instanceof Date
+                        ? DateTime.fromJSDate(dateObj, { zone: zone || "utc" })
+                        : DateTime.fromISO(String(dateObj), { zone: zone || "utc" });
+                return dt.toFormat(format || "dd LLLL yyyy");
+        });
 
-	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
-	});
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+                // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+                const dt = dateObj instanceof Date
+                        ? DateTime.fromJSDate(dateObj, { zone: "utc" })
+                        : DateTime.fromISO(String(dateObj), { zone: "utc" });
+                return dt.toFormat('yyyy-LL-dd');
+        });
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
