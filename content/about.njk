@@ -4,47 +4,15 @@
     eleventyNavigation: {
         key: "About",
         order: 3,
-		parent: "mainNav"
+        parent: "mainNav"
     },
-    
+
     // Other page-specific front matter
     layout: "layouts/page.njk",
     title: "About me",
     permalink: "/about/index.html",
+    eleventyComputed: {
+        post: async (data) => data.aboutPage
+    }
 }
 ---
-
-I make websites
-
-I'm an Auckland-based website manager. I've produced websites and digtal experiences for the British Film Institute, the University of Auckland, Auckland War Memorial Museum, Vodafone, Heart Foundation and Chorus.
-
-This is my personal site where I write about the web, genealogy, history, music, and food.
-Work experience
-
-I orginally trained to be an archaelogist, but after moving to England in investigate a masters in forensic archaeolgy I started working for the webhost Rapidsite, and have worked in the world of web ever since.
-
-Rapidsite was bought out by Verio/NTT, and after that I joined the web team and the amazing marketing and eductaion teams at the British Film Institute. Since then I've worked for public service and private organisations. I'm now the Websites Lead at Chorus where I work between marketing and technology teams to deliver a variety of digital experiences and channels.
-
-You can read more about my experience on LinkedIn.
-
-Colophon
-
-Essential apps
-
-This site is published in Auckland, New Zealand using the Eleventy static site generator.
-
-This site's template is based on a slightly amended version of the Qurno theme by Platol.
-
-This site is produced using:
-
-Bear
-Visual Studio Code
-Pixelmator Pro
-GitHub Desktop
-Site logo
-
-The site logo incorporates the gules (red) three chevronels argent (silvery white) from the flag of Glamorgan (yn Gymraeg: Baner Morgannwg). That design was in turn taken from the arms of Iestyn ap Gwrgant, the last independent ruler of Glamorgan – the region where many of my Welsh family comes from.
-
-Code and server set-up
-
-I use Git for version control, Github to store the repository, and Netlify for website hosting.
