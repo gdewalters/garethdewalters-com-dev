@@ -23,7 +23,7 @@ layout: layouts/base.njk
                   <pre>{{ section | dump | safe }}</pre>
                   <h3>--- End Debugging: Current Section ---</h3>
 
-                  {% set typeId = section.sys?.contentType?.sys?.id %}
+                  {% set typeId = section.sys.contentType.sys.id %}
                   <h3>--- Debugging: typeId ---</h3>
                   <p>typeId: {{ typeId | dump | safe }}</p>
                   <h3>--- End Debugging: typeId ---</h3>
