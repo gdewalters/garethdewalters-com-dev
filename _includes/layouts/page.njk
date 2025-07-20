@@ -11,54 +11,25 @@ layout: layouts/base.njk
         <!-- Page content -->
         <section class="flex justify-center">
             <!-- The 'prose' class from @tailwindcss/typography plugin will style the content -->
-            <div class="prose max-w-prose w-full">
-
-              <h3>--- Debugging: Full post.contentSections ---</h3>
-              <pre>{{ post.contentSections | dump | safe }}</pre>
-              <h3>--- End Debugging: Full post.contentSections ---</h3>
+            <div class="prose max-w-prose w-full"
 
               {% if post.contentSections %}
                 {% for section in post.contentSections %}
-                  <h3>--- Debugging: Current Section ---</h3>
-                  <pre>{{ section | dump | safe }}</pre>
-                  <h3>--- End Debugging: Current Section ---</h3>
-
-                  {% set typeId = section.sys.contentType.sys.id %}
-                  <h3>--- Debugging: typeId ---</h3>
-                  <p>typeId: {{ typeId | dump | safe }}</p>
-                  <h3>--- End Debugging: typeId ---</h3>
-
                   {% if typeId == 'componentRichTextPanel' %}
-                    <h3>--- Debugging: Inside componentRichTextPanel block ---</h3>
-                    
                     {% if section.fields.heading %}
-                      <h3>--- Debugging: section.fields.heading ---</h3>
-                      <p>Heading value: {{ section.fields.heading | dump | safe }}</p>
-                      <h3>--- End Debugging: section.fields.heading ---</h3>
                       <h2>{{ section.fields.heading }}</h2>
-                    {% else %}
-                      <h2>Can't see heading</h2>
                     {% endif %}
 
                     {% if section.fields.standfirst %}
-                      <h3>--- Debugging: section.fields.standfirst ---</h3>
-                      <p>Standfirst value: {{ section.fields.standfirst | dump | safe }}</p>
-                      <h3>--- End Debugging: section.fields.standfirst ---</h3>
                       <p>{{ section.fields.standfirst }}</p>
                     {% endif %}
 
                     {% if section.fields.body %}
-                      <h3>--- Debugging: section.fields.body (Rich Text JSON) ---</h3>
-                      <pre>{{ section.fields.body | dump | safe }}</pre>
-                      <h3>--- End Debugging: section.fields.body ---</h3>
                       {{ section.fields.body | renderRichTextAsHtml | safe }}
                     {% endif %}
-
-                    <h3>--- End Debugging: Inside componentRichTextPanel block ---</h3>
                   {% endif %}
                 {% endfor %}
               {% endif %}
-
 
             </div>
         </section>
