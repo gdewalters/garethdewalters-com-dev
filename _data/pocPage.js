@@ -12,10 +12,14 @@ export default async function () {
     const fields = { ...entry.fields };
     fields.mainImage = parseImageWrapper(fields.mainImage);
 
-    return {
+    const data = {
       ...fields,
       sys: entry.sys,
     };
+
+    console.debug('POC page data:', data);
+
+    return data;
   } catch (err) {
     console.error('Error fetching POC page:', err);
     return {};
