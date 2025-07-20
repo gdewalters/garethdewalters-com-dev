@@ -44,7 +44,16 @@ export default function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
 	});
 
-	eleventyConfig.addFilter("sortAlphabetically", strings =>
-		(strings || []).sort((b, a) => b.localeCompare(a))
-	);
+        eleventyConfig.addFilter("sortAlphabetically", strings =>
+                (strings || []).sort((b, a) => b.localeCompare(a))
+        );
+
+        // Dump object as formatted JSON for debugging
+        eleventyConfig.addFilter("dump", obj => {
+                try {
+                        return JSON.stringify(obj, null, 2);
+                } catch(e) {
+                        return String(obj);
+                }
+        });
 };

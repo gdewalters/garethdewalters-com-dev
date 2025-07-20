@@ -1,0 +1,12 @@
+---js
+{
+  layout: "layouts/page.njk",
+  permalink: "/poc/index.html",
+  eleventyComputed: {
+    post: data => data.pocPage,
+    title: data => data.pocPage?.pageTitle || "Contentful POC"
+  }
+}
+---
+
+<pre>{{ post | dump | safe }}</pre>
