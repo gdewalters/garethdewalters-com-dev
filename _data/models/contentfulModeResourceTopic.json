@@ -1,0 +1,78 @@
+{
+  "name": "Resource: Topic",
+  "description": "A simple model to manage tag / category content relationships on the front-end.",
+  "displayField": "entryTitle",
+  "fields": [
+    {
+      "id": "entryTitle",
+      "name": "Entry title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "topic",
+      "name": "Topic",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [
+        {
+          "unique": true
+        }
+      ],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "resourceTopic",
+    "type": "ContentType",
+    "createdAt": "2023-09-23T22:24:34.015Z",
+    "updatedAt": "2023-09-23T22:24:34.471Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 1,
+    "publishedAt": "2023-09-23T22:24:34.471Z",
+    "firstPublishedAt": "2023-09-23T22:24:34.471Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "publishedCounter": 1,
+    "version": 2,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5jryhU3IaBncsldCwghBg8"
+      }
+    },
+    "urn": "crn:contentful:::content:spaces/uemz79q6jwml/environments/master/content_types/resourceTopic"
+  }
+}
