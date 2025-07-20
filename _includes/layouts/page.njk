@@ -11,14 +11,10 @@ layout: layouts/base.njk
         <!-- Page content -->
         <section class="flex justify-center">
             <!-- The 'prose' class from @tailwindcss/typography plugin will style the content -->
-            <div class="prose max-w-prose w-full">
-
-
+            <div class="prose max-w-prose w-full"
 
               {% if post.contentSections %}
                 {% for section in post.contentSections %}
-                  {% set typeId = section.sys.contentType.sys.id %}
-
                   {% if typeId == 'componentRichTextPanel' %}
                     {% if section.fields.heading %}
                       <h2>{{ section.fields.heading }}</h2>
@@ -34,7 +30,6 @@ layout: layouts/base.njk
                   {% endif %}
                 {% endfor %}
               {% endif %}
-
 
             </div>
         </section>
