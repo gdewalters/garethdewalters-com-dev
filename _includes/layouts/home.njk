@@ -6,7 +6,7 @@ layout: layouts/base.njk
       <!-- <section class="relative overflow-hidden pt-32 pb-20"> /* Used when sticky header is active -->
       {% set featured = post.featuredEntry %}
       {% if featured %}
-      {% set isArticle = featured.sys?.contentType?.sys?.id == 'composeArticle' %}
+      {% set isArticle = featured.sys and featured.sys.contentType and featured.sys.contentType.sys.id == 'composeArticle' %}
       {% set href = isArticle ? '/writing/' + featured.fields.slug + '/' : '/' + featured.fields.slug + '/' %}
       {% set heading = isArticle ? featured.fields.headline : featured.fields.pageTitle %}
       {% set summary = featured.fields.standfirst %}
@@ -71,7 +71,7 @@ layout: layouts/base.njk
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {% if post.latestEntries %}
               {% for entry in post.latestEntries %}
-                {% set isArticle = entry.sys?.contentType?.sys?.id == 'composeArticle' %}
+                {% set isArticle = entry.sys and entry.sys.contentType and entry.sys.contentType.sys and entry.sys.contentType.sys.id == 'composeArticle' %}
                 {% set url = isArticle ? '/writing/' + entry.fields.slug + '/' : '/' + entry.fields.slug + '/' %}
                 {% set title = isArticle ? entry.fields.headline : entry.fields.pageTitle %}
                 {% set standfirst = entry.fields.standfirst %}
@@ -90,7 +90,11 @@ layout: layouts/base.njk
                     {% endif %}
                     <div class="p-6">
                       <div class="mb-3">
-                        <span class="text-primary text-xs font-medium tracking-wider uppercase"> {{ entry.fields.contentTopicTag?.fields?.entryTitle }} </span>
+                        <span class="text-primary text-xs font-medium tracking-wider uppercase">
+                          {% if entry.fields.contentTopicTag and entry.fields.contentTopicTag.fields %}
+                            {{ entry.fields.contentTopicTag.fields.entryTitle }}
+                          {% endif %}
+                        </span>
                       </div>
                       <h3 class="mb-3 font-serif text-xl font-medium">{{ title }}</h3>
                       {% if standfirst %}
