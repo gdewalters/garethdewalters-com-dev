@@ -4,6 +4,21 @@ layout: layouts/base.njk
 
       <!-- Hero Section -->
       <!-- <section class="relative overflow-hidden pt-32 pb-20"> /* Used when sticky header is active -->
+      {% set featured = post.featuredEntry %}
+      {% if featured %}
+      {% set isArticle = featured.sys?.contentType?.sys?.id == 'composeArticle' %}
+      {% set href = isArticle ? '/writing/' + featured.fields.slug + '/' : '/' + featured.fields.slug + '/' %}
+      {% set heading = isArticle ? featured.fields.headline : featured.fields.pageTitle %}
+      {% set summary = featured.fields.standfirst %}
+      {% if featured.fields.mainImage and featured.fields.mainImage.fields.imageFile %}
+        {% set imgObj = {
+          url: 'https:' + featured.fields.mainImage.fields.imageFile.fields.file.url,
+          alt: featured.fields.mainImage.fields.imageAlternativeText or featured.fields.mainImage.fields.imageFile.fields.title,
+          caption: featured.fields.mainImage.fields.imageCaption,
+          photographer: featured.fields.mainImage.fields.creatorPhotographer,
+          licence: featured.fields.mainImage.fields.licenceInformation
+        } %}
+      {% endif %}
       <section class="pt-8 pb-20">
         <div class="w-full max-w-7xl mx-auto">
           <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -11,23 +26,30 @@ layout: layouts/base.njk
               <div class="mb-5">
                 <span class="bg-huntergreen text-white hover:bg-muted-foreground inline-block rounded-full px-3 py-1 text-xs tracking-widest uppercase"> Featured Story </span>
               </div>
-              <a href="/writing/gwenllian-walters-the-case-of-the-disappearing-great-grandmother/" class="no-underline hover:underline">
-                <h1 class="mb-6 font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl">The case of the disappearing great grandmother</h1>
+              <a href="{{ href }}" class="no-underline hover:underline">
+                <h1 class="mb-6 font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl">{{ heading }}</h1>
               </a>
-              <p class="text-muted-foreground mb-8 max-w-lg text-lg text-balance">Gwenllian worked as a domestic servant in Llanelly, Carmarthenshire. After giving birth to a son in 1888, she placed him in the care of her sister Margaret and seemingly vanished from historical records.</p>
+              {% if summary %}
+                <p class="text-muted-foreground mb-8 max-w-lg text-lg text-balance">{{ summary }}</p>
+              {% endif %}
             </div>
 
+            {% if imgObj %}
             <div class="animate-scale-in relative">
               <div class="overflow-hidden rounded-lg">
-                <a href="/writing/gwenllian-walters-the-case-of-the-disappearing-great-grandmother/" class="">
-                  <img src="https://garethdewalters.com/img/To-IVyzgio-4807.jpeg" alt="A young mother and baby wait for news." class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
+                <a href="{{ href }}" class="">
+                  {% contentfulImage imgObj, imgObj.alt, [600], ["webp","jpeg"], "100vw" %}
                 </a>
               </div>
-              <div class="glass-effect absolute right-4 bottom-4 rounded-md p-3 text-xs">Image credit: <span class="font-medium">Amgueddfa Cymru</span></div>
+              {% if imgObj.photographer %}
+              <div class="glass-effect absolute right-4 bottom-4 rounded-md p-3 text-xs">Image credit: <span class="font-medium">{{ imgObj.photographer }}</span></div>
+              {% endif %}
             </div>
+            {% endif %}
           </div>
         </div>
       </section>
+      {% endif %}
 
       <!-- Articles Grid Section -->
       <section class="bg-secondary/30 py-20">
@@ -47,65 +69,43 @@ layout: layouts/base.njk
           </div>
 
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-            <!-- Article Card 1 -->
-            <article class="article-card overflow-hidden rounded-lg">
-              <a href="#" class="block">
-                <div class="overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="Culinary Traditions" class="h-64 w-full object-cover" />
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Lifestyle </span>
-                  </div>
-                  <h3 class="mb-3 font-serif text-xl font-medium">The Art of Slow Living in Modern Cities</h3>
-                  <p class="text-muted-foreground mb-4 text-sm">Exploring how urban dwellers are embracing mindfulness and intentional living amidst the chaos.</p>
-                  <div class="text-muted-foreground flex items-center justify-between text-xs">
-                    <span>Emma Chen</span>
-                    <span>May 23, 2023</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-
-            <!-- Article Card 2 -->
-            <article class="article-card overflow-hidden rounded-lg">
-              <a href="#" class="block">
-                <div class="overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="Culinary Traditions" class="h-64 w-full object-cover" />
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Food </span>
-                  </div>
-                  <h3 class="mb-3 font-serif text-xl font-medium">Culinary Traditions Reimagined</h3>
-                  <p class="text-muted-foreground mb-4 text-sm">How chefs are preserving cultural heritage while innovating with modern techniques.</p>
-                  <div class="text-muted-foreground flex items-center justify-between text-xs">
-                    <span>Marcus Johnson</span>
-                    <span>April 15, 2023</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-
-            <!-- Article Card 3 -->
-            <article class="article-card overflow-hidden rounded-lg">
-              <a href="#" class="block">
-                <div class="overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Digital Craftsmanship" class="h-64 w-full object-cover" />
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <span class="text-primary text-xs font-medium tracking-wider uppercase"> Design </span>
-                  </div>
-                  <h3 class="mb-3 font-serif text-xl font-medium">The New Era of Digital Craftsmanship</h3>
-                  <p class="text-muted-foreground mb-4 text-sm">Artisans embracing technology to create unique pieces that blur the line between traditional and digital.</p>
-                  <div class="text-muted-foreground flex items-center justify-between text-xs">
-                    <span>Nicole Patel</span>
-                    <span>June 7, 2023</span>
-                  </div>
-                </div>
-              </a>
-            </article>
+            {% if post.latestEntries %}
+              {% for entry in post.latestEntries %}
+                {% set isArticle = entry.sys?.contentType?.sys?.id == 'composeArticle' %}
+                {% set url = isArticle ? '/writing/' + entry.fields.slug + '/' : '/' + entry.fields.slug + '/' %}
+                {% set title = isArticle ? entry.fields.headline : entry.fields.pageTitle %}
+                {% set standfirst = entry.fields.standfirst %}
+                {% if entry.fields.mainImage and entry.fields.mainImage.fields.imageFile %}
+                  {% set img = {
+                    url: 'https:' + entry.fields.mainImage.fields.imageFile.fields.file.url,
+                    alt: entry.fields.mainImage.fields.imageAlternativeText or entry.fields.mainImage.fields.imageFile.fields.title
+                  } %}
+                {% endif %}
+                <article class="article-card overflow-hidden rounded-lg">
+                  <a href="{{ url }}" class="block">
+                    {% if img %}
+                    <div class="overflow-hidden">
+                      {% contentfulImage img, img.alt, [400], ["webp","jpeg"], "100vw" %}
+                    </div>
+                    {% endif %}
+                    <div class="p-6">
+                      <div class="mb-3">
+                        <span class="text-primary text-xs font-medium tracking-wider uppercase"> {{ entry.fields.contentTopicTag?.fields?.entryTitle }} </span>
+                      </div>
+                      <h3 class="mb-3 font-serif text-xl font-medium">{{ title }}</h3>
+                      {% if standfirst %}
+                      <p class="text-muted-foreground mb-4 text-sm">{{ standfirst }}</p>
+                      {% endif %}
+                      {% if entry.fields.datePublished %}
+                      <div class="text-muted-foreground flex items-center justify-between text-xs">
+                        <span>{{ entry.fields.datePublished | readableDate }}</span>
+                      </div>
+                      {% endif %}
+                    </div>
+                  </a>
+                </article>
+              {% endfor %}
+            {% endif %}
           </div>
 
           <div class="mt-12 text-center md:hidden">
