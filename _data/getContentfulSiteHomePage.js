@@ -2,7 +2,7 @@ import client from './helpers/contentfulClient.js';
 
 export default async function getContentfulSiteHomePage(id) {
   try {
-    const entry = await client.getEntry(id, { include: 3 });
+    const entry = await client.getEntry('4aiHsUsWbbsmUn9Egjcsk0', { include: 6 });
 
     return {
       ...entry.fields,
