@@ -1,19 +1,15 @@
 import client from './helpers/contentfulClient.js';
 
-export default async function getContentfulSiteHomePage() {
+export default async function getContentfulSiteHomePage(id) {
   try {
-    const entries = await client.getEntries({
-      content_type: 'composeSiteHomePage',
-      limit: 1,
-      include: 3
-    });
+    const entry = await client.getEntry(id, { include: 3 });
 
-    return entries.items.map(item => ({
-      ...item.fields,
-      sys: item.sys
-    }));
+    return {
+      ...entry.fields,
+      sys: entry.sys,
+    };
   } catch (error) {
-    console.error('Error fetching composeSiteHomePage entries:', error);
-    return [];
+    console.error('Error fetching composeSiteHomePage entry:', error);
+    return null;
   }
 }
