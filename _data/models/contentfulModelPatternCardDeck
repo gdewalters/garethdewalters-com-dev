@@ -1,6 +1,6 @@
 {
-  "name": "Compose: Page",
-  "description": "The default page content type.",
+  "name": "Pattern: Card deck",
+  "description": "",
   "displayField": "entryTitle",
   "fields": [
     {
@@ -14,37 +14,31 @@
       "omitted": false
     },
     {
-      "id": "pageTitle",
-      "name": "Page title",
+      "id": "headline",
+      "name": "Headline",
       "type": "Symbol",
       "localized": false,
-      "required": true,
-      "validations": [
-        {
-          "size": {
-            "max": 58
-          }
-        }
-      ],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "slug",
-      "name": "Slug",
-      "type": "Symbol",
-      "localized": false,
-      "required": true,
+      "required": false,
       "validations": [],
       "disabled": false,
       "omitted": false
     },
     {
-      "id": "parentPage",
-      "name": "Parent page",
-      "type": "Link",
+      "id": "clickThroughLabel",
+      "name": "Click-through label",
+      "type": "Symbol",
       "localized": false,
       "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "clickThroughLink",
+      "name": "Click-through link",
+      "type": "Link",
+      "localized": false,
+      "required": true,
       "validations": [
         {
           "linkContentType": [
@@ -57,43 +51,9 @@
       "linkType": "Entry"
     },
     {
-      "id": "seoMetaData",
-      "name": "SEO meta data",
-      "type": "Link",
-      "localized": false,
-      "required": true,
-      "validations": [
-        {
-          "linkContentType": [
-            "metaSeo"
-          ]
-        }
-      ],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Entry"
-    },
-    {
-      "id": "mainImage",
-      "name": "Main image",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [
-        {
-          "linkContentType": [
-            "mediaImageAsset"
-          ]
-        }
-      ],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Entry"
-    },
-    {
-      "id": "datePublished",
-      "name": "Date published",
-      "type": "Date",
+      "id": "desktopSummary",
+      "name": "Desktop summary",
+      "type": "Text",
       "localized": false,
       "required": false,
       "validations": [],
@@ -101,9 +61,9 @@
       "omitted": false
     },
     {
-      "id": "dateUpdated",
-      "name": "Date updated",
-      "type": "Date",
+      "id": "mobileSummary",
+      "name": "Mobile summary",
+      "type": "Text",
       "localized": false,
       "required": false,
       "validations": [],
@@ -111,18 +71,12 @@
       "omitted": false
     },
     {
-      "id": "contentSections",
-      "name": "Content sections",
+      "id": "deckContent",
+      "name": "Deck content",
       "type": "Array",
       "localized": false,
-      "required": true,
-      "validations": [
-        {
-          "size": {
-            "min": 1
-          }
-        }
-      ],
+      "required": false,
+      "validations": [],
       "disabled": false,
       "omitted": false,
       "items": {
@@ -130,11 +84,8 @@
         "validations": [
           {
             "linkContentType": [
-              "componentRichTextPanel",
-              "mediaImageAsset",
-              "mediaVideoAsset",
-              "patternCardDeck",
-              "patternFeaturePromoPrimary"
+              "componentCard",
+              "composeArticle"
             ]
           }
         ],
@@ -150,10 +101,10 @@
         "id": "uemz79q6jwml"
       }
     },
-    "id": "composePage",
+    "id": "patternCardDeck",
     "type": "ContentType",
-    "createdAt": "2023-09-23T22:04:13.573Z",
-    "updatedAt": "2025-07-21T10:32:51.291Z",
+    "createdAt": "2025-07-21T02:42:01.312Z",
+    "updatedAt": "2025-07-21T10:11:26.642Z",
     "environment": {
       "sys": {
         "id": "master",
@@ -161,9 +112,9 @@
         "linkType": "Environment"
       }
     },
-    "publishedVersion": 43,
-    "publishedAt": "2025-07-21T10:32:51.291Z",
-    "firstPublishedAt": "2023-09-23T22:04:14.237Z",
+    "publishedVersion": 23,
+    "publishedAt": "2025-07-21T10:11:26.642Z",
+    "firstPublishedAt": "2025-07-21T02:42:01.770Z",
     "createdBy": {
       "sys": {
         "type": "Link",
@@ -178,8 +129,8 @@
         "id": "5jryhU3IaBncsldCwghBg8"
       }
     },
-    "publishedCounter": 22,
-    "version": 44,
+    "publishedCounter": 12,
+    "version": 24,
     "publishedBy": {
       "sys": {
         "type": "Link",
@@ -187,6 +138,6 @@
         "id": "5jryhU3IaBncsldCwghBg8"
       }
     },
-    "urn": "crn:contentful:::content:spaces/uemz79q6jwml/environments/master/content_types/composePage"
+    "urn": "crn:contentful:::content:spaces/uemz79q6jwml/environments/master/content_types/patternCardDeck"
   }
 }
