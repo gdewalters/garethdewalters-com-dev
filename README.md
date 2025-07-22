@@ -4,7 +4,7 @@ This repository demonstrates pulling Contentful data into an Eleventy site.
 
 ## Proof of Concept: Fetch a Page with Rich Text
 
-1. Copy `.env.example` to `.env` and fill in your Contentful credentials and the page entry ID to load.
+1. Copy `.env.example` to `.env` and fill in your Contentful credentials. Set the `PAGE_ENTRY_ID` of the page you want to load—this variable is required to run `scripts/fetchPage.js`.
 
 2. Run the proof-of-concept script:
 
