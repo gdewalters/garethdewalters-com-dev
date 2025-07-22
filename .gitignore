@@ -16,4 +16,4 @@ node_modules/
 dist
 _site/
 .cache
-.env
+public/assets/scripts/bundle.js

@@ -17,6 +17,7 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
 
 import pluginFilters from "./_config/filters.js";
 
@@ -44,15 +45,18 @@ export default async function(eleventyConfig) {
 		fs.writeFileSync(tailwindOutputPath, result.css);
 	});
 
-	const processor = postcss([
-		//compile tailwind
-		tailwindcss(),
+        const processor = postcss([
+                //compile tailwind
+                tailwindcss(),
 
-		//minify tailwind css
-		cssnano({
-		preset: 'default',
-		}),
-	]);
+                //add vendor prefixes
+                autoprefixer(),
+
+                //minify tailwind css
+                cssnano({
+                preset: 'default',
+                }),
+        ]);
 
 	// Generate a param for the CSS to force latest version
 	const now = String(Date.now())
