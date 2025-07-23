@@ -1,0 +1,938 @@
+{
+  "entryTitle": "HOME - L0 - Site landing",
+  "pageTitle": "Gareth de Walter's personal website",
+  "slug": "/",
+  "seoMetaData": {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "uemz79q6jwml"
+        }
+      },
+      "id": "4abfZqa4Qa1HE7RkEre5cz",
+      "type": "Entry",
+      "createdAt": "2025-07-18T08:39:59.877Z",
+      "updatedAt": "2025-07-18T08:40:20.486Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 5,
+      "revision": 2,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "metaSeo"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "entryTitle": "HOME - L0 - Site landing",
+      "seoTitle": "Gareth de Walters",
+      "canonicalUrl": "https://garethdewalters.com/",
+      "seoNoIndex": false,
+      "seoNoFollow": false,
+      "openGraphLocale": "en_NZ"
+    }
+  },
+  "datePublished": "2025-07-21T00:00+12:00",
+  "contentSections": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "uemz79q6jwml"
+          }
+        },
+        "id": "5Xdx6Pcqw8f75JSERlMMJh",
+        "type": "Entry",
+        "createdAt": "2025-07-21T10:31:23.070Z",
+        "updatedAt": "2025-07-23T10:13:14.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "patternFeaturePromoPrimary"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "entryTitle": "The case of the disappearing great grandmother",
+        "desktopHeadline": "The case of the disappearing great grandmother",
+        "mobileHeadline": "The case of the disappearing great grandmother",
+        "desktopSummary": "On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian registered the birth - and with that bureaucratic step completed - then she disappears from history.",
+        "mobileSummary": "In 1888, a young woman gave birth to her son in the Llanelly Union Workhouse. A month and a half after she registered the birth she disappears from history.",
+        "tag": {
+          "metadata": {
+            "tags": [],
+            "concepts": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uemz79q6jwml"
+              }
+            },
+            "id": "1Z4bTNir3wEQgmAWNva1h",
+            "type": "Entry",
+            "createdAt": "2025-07-19T01:04:43.332Z",
+            "updatedAt": "2025-07-19T01:04:43.332Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 3,
+            "revision": 1,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "resourceTopic"
+              }
+            },
+            "locale": "en-US"
+          },
+          "fields": {
+            "entryTitle": "Genealogy",
+            "topic": "Genealogy"
+          }
+        },
+        "link": {
+          "metadata": {
+            "tags": [],
+            "concepts": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uemz79q6jwml"
+              }
+            },
+            "id": "6sNuvppOJ7TTu9ZWOeFpX4",
+            "type": "Entry",
+            "createdAt": "2025-07-23T10:12:21.330Z",
+            "updatedAt": "2025-07-23T10:12:38.212Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 5,
+            "revision": 2,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "navigationInternalLink"
+              }
+            },
+            "locale": "en-US"
+          },
+          "fields": {
+            "entryTitle": "The case of the disappearing great grandmother",
+            "linkText": "link-test",
+            "internalContent": {
+              "metadata": {
+                "tags": [],
+                "concepts": []
+              },
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "uemz79q6jwml"
+                  }
+                },
+                "id": "7HdVaOoY4ROV2rwDzjFDus",
+                "type": "Entry",
+                "createdAt": "2023-09-23T23:44:23.977Z",
+                "updatedAt": "2025-07-20T20:47:02.177Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "publishedVersion": 50,
+                "revision": 15,
+                "contentType": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "ContentType",
+                    "id": "composeArticle"
+                  }
+                },
+                "locale": "en-US"
+              },
+              "fields": {
+                "entryTitle": "Writing - L2 - Long form - The case of the disappearing great grandmother",
+                "headline": "The case of the disappearing great grandmother",
+                "standfirst": "On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian registered the birth —and with that bureaucratic step completed — then she disappears from history.",
+                "slug": "gwenllian-walters-the-case-of-the-disappearing-great-grandmother",
+                "seoMetaData": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "1yBZAAaECQxMuM92HJ9nah"
+                  }
+                },
+                "mainImage": {
+                  "metadata": {
+                    "tags": [],
+                    "concepts": []
+                  },
+                  "sys": {
+                    "space": {
+                      "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "uemz79q6jwml"
+                      }
+                    },
+                    "id": "7LwyUFnYoRLvbkIBpfcyiP",
+                    "type": "Entry",
+                    "createdAt": "2025-07-14T06:48:53.437Z",
+                    "updatedAt": "2025-07-18T08:31:23.872Z",
+                    "environment": {
+                      "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                      }
+                    },
+                    "publishedVersion": 9,
+                    "revision": 3,
+                    "contentType": {
+                      "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "mediaImageAsset"
+                      }
+                    },
+                    "locale": "en-US"
+                  },
+                  "fields": {
+                    "entryTitle": "A woman waits for news",
+                    "imageFile": {
+                      "metadata": {
+                        "tags": [],
+                        "concepts": []
+                      },
+                      "sys": {
+                        "space": {
+                          "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "uemz79q6jwml"
+                          }
+                        },
+                        "id": "1el2mGDw3ZZ6noLJkGFusC",
+                        "type": "Asset",
+                        "createdAt": "2025-07-14T06:48:07.324Z",
+                        "updatedAt": "2025-07-14T06:48:07.324Z",
+                        "environment": {
+                          "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                          }
+                        },
+                        "publishedVersion": 4,
+                        "revision": 1,
+                        "locale": "en-US"
+                      },
+                      "fields": {
+                        "title": "A woman waits for news",
+                        "file": {
+                          "url": "//images.ctfassets.net/uemz79q6jwml/1el2mGDw3ZZ6noLJkGFusC/fbe7af6b05b692686ec962825f5cf69c/To-IVyzgio-4807.jpeg",
+                          "details": {
+                            "size": 1120036,
+                            "image": {
+                              "width": 4807,
+                              "height": 3054
+                            }
+                          },
+                          "fileName": "To-IVyzgio-4807.jpeg",
+                          "contentType": "image/jpeg"
+                        }
+                      }
+                    },
+                    "imageAlternativeText": "ALt text"
+                  }
+                },
+                "datePublished": "2020-05-11T00:00+12:00",
+                "contentTopicTag": {
+                  "metadata": {
+                    "tags": [],
+                    "concepts": []
+                  },
+                  "sys": {
+                    "space": {
+                      "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "uemz79q6jwml"
+                      }
+                    },
+                    "id": "1Z4bTNir3wEQgmAWNva1h",
+                    "type": "Entry",
+                    "createdAt": "2025-07-19T01:04:43.332Z",
+                    "updatedAt": "2025-07-19T01:04:43.332Z",
+                    "environment": {
+                      "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                      }
+                    },
+                    "publishedVersion": 3,
+                    "revision": 1,
+                    "contentType": {
+                      "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "resourceTopic"
+                      }
+                    },
+                    "locale": "en-US"
+                  },
+                  "fields": {
+                    "entryTitle": "Genealogy",
+                    "topic": "Genealogy"
+                  }
+                },
+                "body": {
+                  "nodeType": "document",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Introduction",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "For years, I've devoted considerable time and resources to uncovering the fate of my great-grandmother Gwenllian Walters. Despite extensive research, her life after 1888 remains a mystery. This article compiles what we know about her life in Victorian Wales, in hopes that these details might resonate with someone researching their own family history.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Who was Gwenllian Walters?",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Born in 1867 in Margam, Glamorganshire, Gwenllian worked as a domestic servant in Llanelly, Carmarthenshire. After giving birth to a son in 1888, she placed him in the care of her sister Margaret and seemingly vanished from historical records.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Early life",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Gwenllian (from Welsh gwen \"fair, blessed, white\" and llian \"flaxen\") was born at home on Constant Row, Margam, on September 6, 1867. She was the fourth child and second daughter of Lewis Walter(s), a coal miner, and his wife Ann (née John).",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "embedded-entry-block",
+                      "data": {
+                        "target": {
+                          "sys": {
+                            "id": "5GJTqPY8nymhvv10YOqLsu",
+                            "type": "Link",
+                            "linkType": "Entry"
+                          }
+                        }
+                      },
+                      "content": []
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Tragedy struck early in Gwenllian's life. Her mother Ann died before April 1871, when we find three-year-old Gwenllian living at 3 Greenfield Row, Margam, with her:",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "unordered-list",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Paternal grandparents, Lewis and Margaret Walters",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Father, Lewis Walter(s)",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Siblings: David, Margaret, and William",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Maternal grandmother, Gwenllian John (née Morgan)",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "The presence of her maternal grandmother, also named Gwenllian, suggests she may have helped care for the motherless children. Like her sister, Gwenllian likely spoke both Welsh and English.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "embedded-entry-block",
+                      "data": {
+                        "target": {
+                          "sys": {
+                            "id": "62ORquWUPqHdto46rDfYkH",
+                            "type": "Link",
+                            "linkType": "Entry"
+                          }
+                        }
+                      },
+                      "content": []
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "The mystery deepens",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "By 1888, Gwenllian had moved to Llanelli, working as a domestic servant on Market Street. Her workplace at Mount Pleasant was roughly 500 meters from her residence.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-3",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "A mother's choice",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "On July 22, 1888, Gwenllian gave birth to a son, David Lewis Walters, at the Llanelly Union Workhouse. No father was listed on the birth certificate, though genetic genealogy research suggests the surname Thomas. The middle name \"Lewis\" could reference either Gwenllian's father or potentially indicate the father's first name. After registering her son's birth, Gwenllian disappears from historical records. She likely remained at the workhouse briefly before seeking new employment. Her son, raised by her sister Margaret Ann Samuel, became known locally as \"Dai Sam.\"",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Possible later sighting",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "A tantalising clue appears in the 1891 census: a \"G. Walters\" working as a housemaid at the Thomas Arms Hotel, Mount Pleasant, Llanelli (a pub that still operates today). While this person listed their birthplace as Aberavon (10km from Margam), such discrepancies were common in Victorian record-keeping.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Do you have information about Gwenllian?",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "I'm particularly interested in:",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "ordered-list",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Any records of a Gwenllian Walters (or similar variations) after 1888",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Information about domestic servants at the Thomas Arms Hotel in the 1890s",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Family stories about a Welsh woman named Gwenllian who appeared in your community in the late 1880s",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Records from other workhouses or institutions that might mention her",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "list-item",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "paragraph",
+                              "data": {},
+                              "content": [
+                                {
+                                  "nodeType": "text",
+                                  "value": "Any Thomas family connections to the Llanelli area in the 1880s",
+                                  "marks": [],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "heading-2",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "How to contact me",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "If any of these details spark a connection with your own family research, or if you have information about domestic servants in late Victorian Llanelli who could be Gwenllian, please message me on ",
+                          "marks": [],
+                          "data": {}
+                        },
+                        {
+                          "nodeType": "hyperlink",
+                          "data": {
+                            "uri": "https://www.threads.net/@gdewalters"
+                          },
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Threads",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "text",
+                          "value": " or ",
+                          "marks": [],
+                          "data": {}
+                        },
+                        {
+                          "nodeType": "hyperlink",
+                          "data": {
+                            "uri": "https://bsky.app/profile/gdewalters.bsky.social"
+                          },
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Bluesky",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "text",
+                          "value": ".",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Every piece of information, no matter how small, could help solve the mystery of what happened to Gwenllian Walters.",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "linkTargetAttribute": "_self"
+          }
+        },
+        "image": {
+          "metadata": {
+            "tags": [],
+            "concepts": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uemz79q6jwml"
+              }
+            },
+            "id": "7LwyUFnYoRLvbkIBpfcyiP",
+            "type": "Entry",
+            "createdAt": "2025-07-14T06:48:53.437Z",
+            "updatedAt": "2025-07-18T08:31:23.872Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 9,
+            "revision": 3,
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "mediaImageAsset"
+              }
+            },
+            "locale": "en-US"
+          },
+          "fields": {
+            "entryTitle": "A woman waits for news",
+            "imageFile": {
+              "metadata": {
+                "tags": [],
+                "concepts": []
+              },
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "uemz79q6jwml"
+                  }
+                },
+                "id": "1el2mGDw3ZZ6noLJkGFusC",
+                "type": "Asset",
+                "createdAt": "2025-07-14T06:48:07.324Z",
+                "updatedAt": "2025-07-14T06:48:07.324Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "publishedVersion": 4,
+                "revision": 1,
+                "locale": "en-US"
+              },
+              "fields": {
+                "title": "A woman waits for news",
+                "file": {
+                  "url": "//images.ctfassets.net/uemz79q6jwml/1el2mGDw3ZZ6noLJkGFusC/fbe7af6b05b692686ec962825f5cf69c/To-IVyzgio-4807.jpeg",
+                  "details": {
+                    "size": 1120036,
+                    "image": {
+                      "width": 4807,
+                      "height": 3054
+                    }
+                  },
+                  "fileName": "To-IVyzgio-4807.jpeg",
+                  "contentType": "image/jpeg"
+                }
+              }
+            },
+            "imageAlternativeText": "ALt text"
+          }
+        }
+      }
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "4aiHsUsWbbsmUn9Egjcsk0",
+    "type": "Entry",
+    "createdAt": "2025-07-21T10:13:03.821Z",
+    "updatedAt": "2025-07-23T09:07:14.389Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 11,
+    "revision": 3,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "composePage"
+      }
+    },
+    "locale": "en-US"
+  }
+}
