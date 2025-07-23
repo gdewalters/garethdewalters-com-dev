@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js && npx @11ty/eleventy",
-    "build:js": "node scripts/build-js.js",
+    "build:js": "node _helpers/build-js.js",
     "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
     "start": "npx @11ty/eleventy --serve --quiet",
