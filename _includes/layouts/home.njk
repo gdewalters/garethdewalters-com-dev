@@ -1,23 +1,17 @@
 ---
 layout: layouts/base.njk
 ---
-
+<pre>{{ post | dump }}</pre> {# This will print the entire 'post' object #}
       <!-- Hero Section -->
       <!-- <section class="relative overflow-hidden pt-32 pb-20"> /* Used when sticky header is active -->
-      {% set featured = post.featuredEntry %}
+      {% set featured = "Cymru" %}
       {% if featured %}
       {% set isArticle = featured.sys and featured.sys.contentType and featured.sys.contentType.sys.id == 'composeArticle' %}
       {% set href = isArticle ? '/writing/' + featured.fields.slug + '/' : '/' + featured.fields.slug + '/' %}
       {% set heading = isArticle ? featured.fields.headline : featured.fields.pageTitle %}
       {% set summary = featured.fields.standfirst %}
       {% if featured.fields.mainImage and featured.fields.mainImage.fields.imageFile %}
-        {% set imgObj = {
-          url: 'https:' + featured.fields.mainImage.fields.imageFile.fields.file.url,
-          alt: featured.fields.mainImage.fields.imageAlternativeText or featured.fields.mainImage.fields.imageFile.fields.title,
-          caption: featured.fields.mainImage.fields.imageCaption,
-          photographer: featured.fields.mainImage.fields.creatorPhotographer,
-          licence: featured.fields.mainImage.fields.licenceInformation
-        } %}
+        {% set imgObj = { url: 'https:' + featured.fields.mainImage.fields.imageFile.fields.file.url, alt: featured.fields.imageAlternativeText or featured.fields.mainImage.fields.imageFile.fields.title, caption: featured.fields.imageCaption, photographer: featured.fields.mainImage.fields.creatorPhotographer, licence: featured.fields.mainImage.fields.licenceInformation } %}
       {% endif %}
       <section class="pt-8 pb-20">
         <div class="w-full max-w-7xl mx-auto">

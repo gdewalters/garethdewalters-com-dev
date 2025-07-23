@@ -9,7 +9,7 @@ export default async function siteHomePage() {
   }
 
   const fetcher = async () => {
-    const entry = await client.getEntry(entryId, { include: 6 });
+    const entry = await client.getEntry(entryId, { include: 3 });
     return {
       ...entry.fields,
       sys: entry.sys
