@@ -4,9 +4,8 @@ layout: layouts/base.njk
 
 {% set featurePromo = null %}
 {% for section in post.contentSections %}
-  {% if section.sys.contentType.sys.id == 'patternFeaturePromoPrimary' %}
+  {% if not featurePromo and section.sys.contentType.sys.id == 'patternFeaturePromoPrimary' %}
     {% set featurePromo = section %}
-    {% break %}
   {% endif %}
 {% endfor %}
 
