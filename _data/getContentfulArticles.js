@@ -1,6 +1,6 @@
-import client from './helpers/contentfulClient.js';
-import parseImageWrapper from './helpers/parseImageWrapper.js';
-import cachedFetch from './helpers/cache.js';
+import client from '../_helpers/contentfulClient.js';
+import parseImageWrapper from '../_helpers/parseImageWrapper.js';
+import cachedFetch from '../_helpers/cache.js';
 
 export default async function getContentfulArticles() {
   const fetcher = async () => {

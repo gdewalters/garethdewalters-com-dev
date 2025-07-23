@@ -9,7 +9,7 @@ import 'dotenv/config'; // Load environment variables (ESM syntax for dotenv)
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 
-import parseImageWrapper from './_data/helpers/parseImageWrapper.js';
+import parseImageWrapper from './_helpers/parseImageWrapper.js';
 
 import fs from 'fs';
 import path from 'path';

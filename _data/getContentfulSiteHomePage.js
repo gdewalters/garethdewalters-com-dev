@@ -1,5 +1,5 @@
-import client from './helpers/contentfulClient.js';
-import cachedFetch from './helpers/cache.js';
+import client from '../_helpers/contentfulClient.js';
+import cachedFetch from '../_helpers/cache.js';
 
 export default async function siteHomePage() {
   const entryId = process.env.SITE_HOME_ENTRY_ID;
