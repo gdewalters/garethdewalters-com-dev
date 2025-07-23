@@ -1,4 +1,47 @@
 ---
 layout: layouts/base.njk
 ---
-<pre>{{ post | dump }}</pre> {# This will print the entire 'post' object #}
+
+{% set featurePromo = null %}
+{% for section in post.contentSections %}
+  {% if section.sys.contentType.sys.id == 'patternFeaturePromoPrimary' %}
+    {% set featurePromo = section %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if featurePromo %}
+  <section class="pt-8 pb-20">
+    <div class="w-full max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div class="animate-fade-in">
+          <div class="mb-5">
+            <span class="bg-huntergreen text-white inline-block rounded-full px-3 py-1 text-xs tracking-widest uppercase">
+              {{ featurePromo.fields.tag.fields.topic }}
+            </span>
+          </div>
+          <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}/" class="no-underline hover:underline">
+            <h1 class="mb-6 font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl">
+              {{ featurePromo.fields.desktopHeadline }}
+            </h1>
+          </a>
+          <p class="text-muted-foreground mb-8 max-w-lg text-lg text-balance">
+            {{ featurePromo.fields.desktopSummary }}
+          </p>
+        </div>
+        <div class="animate-scale-in relative">
+          <div class="overflow-hidden rounded-lg">
+            <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}/">
+              <img
+                src="https:{{ featurePromo.fields.link.fields.internalContent.fields.mainImage.fields.imageFile.fields.file.url }}"
+                alt="{{ featurePromo.fields.link.fields.internalContent.fields.mainImage.fields.imageAlternativeText }}"
+                class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <pre>{{ post | dump }}</pre>
+{% endif %}

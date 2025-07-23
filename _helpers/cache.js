@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { parse, stringify } from 'flatted';
 
 export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
   const cacheDir = path.resolve('.cache');
@@ -8,7 +9,7 @@ export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
 
   if (fs.existsSync(cacheFile)) {
     try {
-      const { timestamp, payload } = JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+      const { timestamp, payload } = parse(fs.readFileSync(cacheFile, 'utf8'));
       if (now - timestamp < ttlSeconds * 1000) {
         return payload;
       }
@@ -21,6 +22,6 @@ export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
   if (!fs.existsSync(cacheDir)) {
     fs.mkdirSync(cacheDir, { recursive: true });
   }
-  fs.writeFileSync(cacheFile, JSON.stringify({ timestamp: now, payload }), 'utf8');
+  fs.writeFileSync(cacheFile, stringify({ timestamp: now, payload }), 'utf8');
   return payload;
 }
