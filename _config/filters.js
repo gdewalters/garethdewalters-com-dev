@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import { stringify } from "flatted";
 
 export default function(eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -51,7 +52,7 @@ export default function(eleventyConfig) {
         // Dump object as formatted JSON for debugging
         eleventyConfig.addFilter("dump", obj => {
                 try {
-                        return JSON.stringify(obj, null, 2);
+                        return stringify(obj, null, 2);
                 } catch(e) {
                         return String(obj);
                 }
