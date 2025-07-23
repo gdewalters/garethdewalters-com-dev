@@ -304,6 +304,9 @@ export const config = {
 	// Pre-process *.html files with: (default: `liquid`)
 	htmlTemplateEngine: "njk",
 
+	// Pre-process ? files with: (default: `njk`)
+    dataTemplateEngine: "njk",
+
 	// These are all optional:
 	dir: {
 		input: "content",          // default: "."
