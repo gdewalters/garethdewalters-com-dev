@@ -8,7 +8,7 @@ To set up and run the project locally, follow these steps:
 
 ### 1. Install Dependencies
 
-Ensure Node.js version 18 or higher is installed.
+Ensure Node.js version 20 or higher is installed.
 
 ```bash
 npm install
@@ -52,7 +52,7 @@ The project uses Nunjucks for templating. Ensure any template tags or logic impl
 
 Maintain consistency in code style by adhering to these guidelines:
 
-- **Node Version:** 18+
+- **Node Version:** 20+
 - **JavaScript Modules:** Use ES Modules (`import/export` syntax).
 - **Quotes:** Use single quotes (`'`) for strings.
 - **Indentation:** Two spaces per indentation level.
