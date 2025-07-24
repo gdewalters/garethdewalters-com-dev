@@ -1,5 +1,6 @@
 import client from '../_helpers/contentfulClient.js';
 import cachedFetch from '../_helpers/cache.js';
+import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 
 export default async function siteHomePage() {
   const entryId = process.env.SITE_HOME_ENTRY_ID;
@@ -10,8 +11,19 @@ export default async function siteHomePage() {
 
   const fetcher = async () => {
     const entry = await client.getEntry(entryId, { include: 3 });
+    const fields = { ...entry.fields };
+    if (Array.isArray(fields.contentSections)) {
+      fields.contentSections = fields.contentSections.map(section => {
+        const typeId = section.sys?.contentType?.sys?.id;
+        if (typeId === 'patternFeaturePromoPrimary') {
+          const image = parseImageWrapper(section.fields.image);
+          return { ...section, fields: { ...section.fields, image } };
+        }
+        return section;
+      });
+    }
     return {
-      ...entry.fields,
+      ...fields,
       sys: entry.sys
     };
   };
