@@ -59,3 +59,4 @@ Maintain consistency in code style by adhering to these guidelines:
 - **Newlines:** Ensure a newline at the end of each file.
 
 Following these conventions helps maintain readability and consistency across the project.
+
