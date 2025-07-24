@@ -9,6 +9,8 @@ layout: layouts/base.njk
   {% endif %}
 {% endfor %}
 
+<pre>{{ featurePromo.fields.image.fields.imageFile.fields.file.url  | dump }}</pre>
+
 {% if featurePromo %}
   <section class="pt-8 pb-20">
     <div class="w-full max-w-7xl mx-auto">
@@ -32,8 +34,8 @@ layout: layouts/base.njk
           <div class="overflow-hidden rounded-lg">
             <a href="/writing/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}/">
               <img
-                src="{{ featurePromo.fields.image.url }}"
-                alt="{{ featurePromo.fields.image.alt }}"
+                src="https:{{ featurePromo.fields.image.fields.imageFile.fields.file.url }}"
+                alt="{{ featurePromo.fields.image.fields.imageFile.fields.title }}"
                 class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
             </a>
           </div>

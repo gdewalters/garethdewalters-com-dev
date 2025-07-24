@@ -10,7 +10,9 @@ export default async function siteHomePage() {
   }
 
   const fetcher = async () => {
-    const entry = await client.getEntry(entryId, { include: 3 });
+    const entry = await client.getEntry(entryId, { include: 6 });
+    // Log the full resolved entry structure for inspection
+    console.log('Resolved Contentful Entry:', JSON.stringify(entry, null, 2));
     const fields = { ...entry.fields };
     if (Array.isArray(fields.contentSections)) {
       fields.contentSections = fields.contentSections.map(section => {
