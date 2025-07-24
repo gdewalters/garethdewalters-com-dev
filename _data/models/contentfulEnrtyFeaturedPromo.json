@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "tags": [],
+    "concepts": []
+  },
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "5Xdx6Pcqw8f75JSERlMMJh",
+    "type": "Entry",
+    "createdAt": "2025-07-21T10:31:23.070Z",
+    "updatedAt": "2025-07-24T00:26:13.628Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 31,
+    "revision": 6,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "patternFeaturePromoPrimary"
+      }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "entryTitle": "The case of the disappearing great grandmother",
+    "desktopHeadline": "The case of the disappearing great grandmother",
+    "mobileHeadline": "The case of the disappearing great grandmother",
+    "desktopSummary": "On 22 September 1888, a young woman gave birth to her illegitimate son in the Llanelly Union Workhouse, South Wales. A month and a half later Gwenllian registered the birth - and with that bureaucratic step completed - then she disappears from history.",
+    "mobileSummary": "In 1888, a young woman gave birth to her son in the Llanelly Union Workhouse. A month and a half after she registered the birth she disappears from history.",
+    "tag": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Entry",
+        "id": "1Z4bTNir3wEQgmAWNva1h"
+      }
+    },
+    "link": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Entry",
+        "id": "7HdVaOoY4ROV2rwDzjFDus"
+      }
+    },
+    "image": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Entry",
+        "id": "7LwyUFnYoRLvbkIBpfcyiP"
+      }
+    }
+  }
+}

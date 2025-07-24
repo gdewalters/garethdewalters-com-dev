@@ -19,7 +19,7 @@ layout: layouts/base.njk
               {{ featurePromo.fields.tag.fields.topic }}
             </span>
           </div>
-          <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}/" class="no-underline hover:underline">
+          <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}" class="no-underline hover:underline">
             <h1 class="mb-6 font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl">
               {{ featurePromo.fields.desktopHeadline }}
             </h1>
@@ -30,10 +30,10 @@ layout: layouts/base.njk
         </div>
         <div class="animate-scale-in relative">
           <div class="overflow-hidden rounded-lg">
-            <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}/">
+            <a href="/{{ featurePromo.fields.link.fields.internalContent.fields.slug }}">
               <img
-                src="https:{{ featurePromo.fields.link.fields.internalContent.fields.mainImage.fields.imageFile.fields.file.url }}"
-                alt="{{ featurePromo.fields.link.fields.internalContent.fields.mainImage.fields.imageAlternativeText }}"
+                src="https:{{ featurePromo.fields.link.fields.internalContent.fields.image.fields.imageFile.fields.file.url }}"
+                alt="{{ featurePromo.fields.link.fields.internalContent.fields.image.fields.imageAlternativeText }}"
                 class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
             </a>
           </div>
