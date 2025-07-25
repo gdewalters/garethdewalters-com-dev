@@ -2,6 +2,19 @@ import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import cachedFetch from '../_helpers/cache.js';
 
+/** 
+ * 
+ * 
+ * Fetches a single article entry from Contentful, specifically the one designated as the featured promo article.
+ * This function retrieves the entry by its ID, processes the main image using `parseImageWrapper`.
+ * 
+ * It resues code from 'getContentfulFeaturedPromo.js' to ensure consistency in how images are handled, but may require
+ * simplification because  deckContent is not needed for a single article.
+ * 
+ * To do: Fix the mainImage parsing to ensure it works correctly with the new image structure.
+ * 
+ **/ 
+
 export default async function getContentfulArticleSingle() {
   // const entryId = process.env.PROMO_ARTICLE_ENTRY_ID;
   const entryId = '5Xdx6Pcqw8f75JSERlMMJh'; // For testing purposes, replace with actual environment variable in production
