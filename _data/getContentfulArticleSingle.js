@@ -2,12 +2,12 @@ import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import cachedFetch from '../_helpers/cache.js';
 
-export default async function getContentfulFeaturedPromo() {
-  // const entryId = process.env.FEATURED_PROMO_ENTRY_ID;
+export default async function getContentfulArticleSingle() {
+  // const entryId = process.env.PROMO_ARTICLE_ENTRY_ID;
   const entryId = '5Xdx6Pcqw8f75JSERlMMJh'; // For testing purposes, replace with actual environment variable in production
 
   if (!entryId) {
-    console.warn('FEATURED_PROMO_ENTRY_ID environment variable is not set.');
+    console.warn('PROMO_ARTICLE_ENTRY_ID environment variable is not set.');
     return null;
   }
 
