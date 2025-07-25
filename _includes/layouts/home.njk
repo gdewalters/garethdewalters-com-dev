@@ -3,6 +3,7 @@ layout: layouts/base.njk
 ---
 
 {% set featuredPromo = getContentfulFeaturedPromo %}
+
 {% if featuredPromo %}
 
 
@@ -45,6 +46,11 @@ layout: layouts/base.njk
 
 
 {% set cardDeck = getContentfulCardDeck %}
+
+
+
+{{ cardDeck | dump }}
+
 {% if cardDeck and cardDeck.deckContent and cardDeck.deckContent.length > 0 %}
   <section class="bg-secondary/30 py-20">
     <div class="w-full max-w-7xl mx-auto">

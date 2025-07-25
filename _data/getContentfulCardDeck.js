@@ -10,7 +10,7 @@ export default async function getContentfulCardDeck() {
   }
 
   const fetcher = async () => {
-    const entry = await client.getEntry(entryId, { include: 3 });
+    const entry = await client.getEntry(entryId, { include: 6 });
     const fields = { ...entry.fields };
     const deck = (fields.deckContent || []).map(item => {
       const typeId = item.sys?.contentType?.sys?.id;
