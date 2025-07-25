@@ -37,8 +37,6 @@ layout: layouts/base.njk
     </div>
   </section>
 
-
-
 {% endif %}
 
 
@@ -46,10 +44,6 @@ layout: layouts/base.njk
 
 
 {% set cardDeck = getContentfulCardDeck %}
-
-
-
-{{ cardDeck | dump }}
 
 {% if cardDeck and cardDeck.deckContent and cardDeck.deckContent.length > 0 %}
   <section class="bg-secondary/30 py-20">
@@ -62,7 +56,7 @@ layout: layouts/base.njk
           {% endif %}
         </div>
         {% if cardDeck.clickThroughLink %}
-        <a href="/{{ cardDeck.clickThroughLink.fields.internalContent.fields.slug }}/" class="group hidden items-center text-sm font-medium tracking-wider uppercase md:inline-flex">
+        <a href="/{{ cardDeck.clickThroughLink.fields.slug }}/" class="group hidden items-center text-sm font-medium tracking-wider uppercase md:inline-flex">
           {{ cardDeck.clickThroughLabel or 'View all articles' }}
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transition-transform group-hover:translate-x-1">
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -103,7 +97,7 @@ layout: layouts/base.njk
 
       <div class="mt-12 text-center md:hidden">
         {% if cardDeck.clickThroughLink %}
-        <a href="/{{ cardDeck.clickThroughLink.fields.internalContent.fields.slug }}/" class="group inline-flex items-center text-sm font-medium tracking-wider uppercase">
+        <a href="/{{ cardDeck.clickThroughLink.fields.slug }}/" class="group inline-flex items-center text-sm font-medium tracking-wider uppercase">
           {{ cardDeck.clickThroughLabel or 'View all articles' }}
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transition-transform group-hover:translate-x-1">
             <line x1="5" y1="12" x2="19" y2="12"></line>
