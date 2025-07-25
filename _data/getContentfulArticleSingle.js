@@ -14,15 +14,25 @@ export default async function getContentfulArticleSingle() {
   const fetcher = async () => {
     const entry = await client.getEntry(entryId, { include: 3 });
     const fields = { ...entry.fields };
+
+    // ✨ NEW LINE: Apply parseImageWrapper to the mainImage field of the top-level entry ✨
+    if (fields.mainImage) { // Check if mainImage exists before parsing
+      fields.mainImage = parseImageWrapper(fields.mainImage);
+    }
+
+    // This 'deck' processing might still be unnecessary if you only want a single article's fields.
+    // However, for now, we're leaving it as is, focusing on the mainImage fix.
     const deck = (fields.deckContent || []).map(item => {
       const typeId = item.sys?.contentType?.sys?.id;
       if (typeId === 'composeArticle') {
         const articleFields = { ...item.fields };
+        // This line is for images *within* the deckContent, if it were used.
         articleFields.mainImage = parseImageWrapper(articleFields.mainImage);
         return { ...articleFields, sys: item.sys };
       }
       return null;
     }).filter(Boolean);
+
     return { ...fields, deckContent: deck, sys: entry.sys };
   };
 
