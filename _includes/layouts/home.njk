@@ -4,10 +4,6 @@ layout: layouts/base.njk
 
 {% set featuredPromo = getContentfulArticleSingle %}
 
-
-
-{% set featuredPromo = getContentfulArticleSingle %}
-
 {% if featuredPromo %}
 
   <section class="pt-8 pb-20">
@@ -26,7 +22,6 @@ layout: layouts/base.njk
 
         <div class="animate-scale-in relative">
           <div class="overflow-hidden rounded-lg">
-            {# Image src and alt should now be dynamic from mainImage #}
             <a href="/writing/{{ featuredPromo.link.fields.slug }}/" class="">
               <img src="{{ featuredPromo.mainImage.url }}" alt="{{ featuredPromo.mainImage.alt }}" class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
             </a>
