@@ -44,47 +44,6 @@ layout: layouts/base.njk
 {% endif %}
 
 
-
-
-
-
-
-
-
-{% if featuredPromo %}
-
-  <section class="pt-8 pb-20">
-    <div class="w-full max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-        <div class="animate-fade-in">
-          <div class="mb-5">
-            <span class="bg-huntergreen text-white hover:bg-muted-foreground inline-block rounded-full px-3 py-1 text-xs tracking-widest uppercase"> Featured Story </span>
-          </div>
-          <a href="/writing/gwenllian-walters-the-case-of-the-disappearing-great-grandmother/" class="no-underline hover:underline">
-            <h1 class="mb-6 font-serif text-4xl leading-tight font-medium md:text-5xl lg:text-6xl">{{ featuredPromo.desktopHeadline }}</h1>
-          </a>
-          <p class="text-muted-foreground mb-8 max-w-lg text-lg text-balance">{{ featuredPromo.desktopSummary }}</p>
-        </div>
-
-        <div class="animate-scale-in relative">
-          <div class="overflow-hidden rounded-lg">
-            <a href="article.html" class="">
-              <img src="{{ NOT_YET_FETCHING_FROM_CONTENTFUL }}" alt="{{ NOT_YET_FETCHING_FROM_CONTENTFUL }}" class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
-            </a>
-          </div>
-            {% if featuredPromo.mainImage.photographer %}
-            <div class="glass-effect absolute right-4 bottom-4 rounded-md p-3 text-xs">
-              Image credit: <span class="font-medium">{{ featuredPromo.mainImage.photographer }}</span>
-            </div>
-            {% endif %}
-        </div>
-      </div>
-    </div>
-  </section>
-
-{% endif %}
-
-
 {% set cardDeck = getContentfulCardDeck %}
 
 {% if cardDeck and cardDeck.deckContent and cardDeck.deckContent.length > 0 %}
