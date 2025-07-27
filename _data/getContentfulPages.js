@@ -1,5 +1,6 @@
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
+import parseSeo from '../_helpers/parseSeo.js';
 import cachedFetch from '../_helpers/cache.js';
 
 export default async function getContentfulPages() {
@@ -13,6 +14,9 @@ export default async function getContentfulPages() {
     return entries.items.map(item => {
       const fields = { ...item.fields };
       fields.mainImage = parseImageWrapper(fields.mainImage);
+      if (fields.seoMetaData) {
+        fields.seo = parseSeo(fields.seoMetaData);
+      }
       return {
         ...fields,
         sys: item.sys,

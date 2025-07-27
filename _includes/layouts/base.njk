@@ -4,8 +4,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gareth de Walters</title>
-    <meta name="description" content="A curated magazine exploring design, culture, and thoughtful living" />
+    {% set seo = post.seo or {} %}
+    {% set seoTitle = seo.seoTitle or metadata.title %}
+    {% set seoDescription = seo.metaDescription or metadata.description %}
+    <title>{{ seoTitle }}</title>
+    <meta name="description" content="{{ seoDescription }}" />
+    <link rel="canonical" href="{{ seo.canonicalUrl or metadata.url }}" />
+    <meta name="robots" content="{{ seo.seoNoIndex ? 'noindex' : 'index' }},{{ seo.seoNoFollow ? 'nofollow' : 'follow' }}" />
+    <meta property="og:title" content="{{ seo.openGraphTitle or seoTitle }}" />
+    <meta property="og:description" content="{{ seo.openGraphDescription or seoDescription }}" />
+    {% if seo.openGraphImage and seo.openGraphImage.fields and seo.openGraphImage.fields.file %}
+    <meta property="og:image" content="https:{{ seo.openGraphImage.fields.file.url }}" />
+    {% endif %}
+    {% if seo.openGraphType %}<meta property="og:type" content="{{ seo.openGraphType }}" />{% endif %}
+    {% if seo.openGraphLocale %}<meta property="og:locale" content="{{ seo.openGraphLocale }}" />{% endif %}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />    
     <link rel="stylesheet" href="/assets/styles/style.css?v={% version %}"/>
   </head>

@@ -6,6 +6,7 @@
 
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
+import parseSeo from '../_helpers/parseSeo.js';
 import cachedFetch from '../_helpers/cache.js';
 
 export default async function getContentfulArticleSingle() {
@@ -23,6 +24,9 @@ export default async function getContentfulArticleSingle() {
 
     const imageEntry = fields.mainImage || fields.image || null;
     fields.mainImage = parseImageWrapper(imageEntry);
+    if (fields.seoMetaData) {
+      fields.seo = parseSeo(fields.seoMetaData);
+    }
 
     // This 'deck' processing might still be unnecessary if you only want a single article's fields.
     // However, for now, we're leaving it as is, focusing on the mainImage fix.
