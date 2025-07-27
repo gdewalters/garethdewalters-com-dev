@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "tags": [],
+    "concepts": []
+  },
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "uemz79q6jwml"
+      }
+    },
+    "id": "4abfZqa4Qa1HE7RkEre5cz",
+    "type": "Entry",
+    "createdAt": "2025-07-18T08:39:59.877Z",
+    "updatedAt": "2025-07-26T22:44:25.954Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 19,
+    "revision": 4,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "metaSeo"
+      }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "entryTitle": "HOME - L0 - Site landing",
+    "seoTitle": "Gareth de Walters' personal website",
+    "metaDescription": "Meta description",
+    "canonicalUrl": "https://garethdewalters.com/",
+    "seoNoIndex": false,
+    "seoNoFollow": false,
+    "openGraphTitle": "Gareth de Walters' personal website",
+    "openGraphDescription": "Open Graph description (required)",
+    "openGraphImage": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Asset",
+        "id": "2cmAuD1pcDkBA3QICm13St"
+      }
+    },
+    "openGraphType": "Website",
+    "openGraphLocale": "en_NZ"
+  }
+}
