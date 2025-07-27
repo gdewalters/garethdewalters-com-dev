@@ -1,3 +1,6 @@
+// _helpers/cache.js
+// This module provides a caching mechanism for fetching data.    
+
 import fs from 'fs';
 import path from 'path';
 import { parse, stringify } from 'flatted';

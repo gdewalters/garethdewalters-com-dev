@@ -1,3 +1,9 @@
+// _data/getContentfulArticleSingle.js
+// This module fetches a single article entry from Contentful, specifically for the promo article.
+// It includes error handling and caching for performance.
+// It also processes the main image and deck content if available.
+// Note: The entry ID is hardcoded for testing purposes; it should be replaced with an environment variable in production.   
+
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import cachedFetch from '../_helpers/cache.js';
