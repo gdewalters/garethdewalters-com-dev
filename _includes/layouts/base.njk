@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {# UPDATED: Set 'seo' to check for data in post.fields.seo (for pages) or post.fields.seoMetaData (for articles/promos) #}
-    {% set seo = post.fields.seo or post.fields.seoMetaData or {} %}
+    {% set seo = post.seo or post.seoMetaData or {} %}
 
     {# ✨ CORRECTED DEBUG STATEMENTS - CHECKING EXISTENCE AND PRINTING PROPERTIES DIRECTLY ✨ #}
     <pre>DEBUG: post exists: {{ post is defined }}</pre>
-    <pre>DEBUG: post.fields exists: {{ post.fields is defined }}</pre>
-    {% if post.fields is defined and post.fields.seoMetaData is defined %}
-        <pre>DEBUG: post.fields.seoMetaData.seoTitle: {{ post.fields.seoMetaData.seoTitle }}</pre>
-        <pre>DEBUG: post.fields.seoMetaData.metaDescription: {{ post.fields.seoMetaData.metaDescription }}</pre>
-        <pre>DEBUG: post.fields.seoMetaData.canonicalUrl: {{ post.fields.seoMetaData.canonicalUrl }}</pre>
+    <pre>DEBUG: post.seoMetaData exists: {{ post.seoMetaData is defined }}</pre>
+
+    {% if post is defined and post.seoMetaData is defined %}
+        <pre>DEBUG: post.seoMetaData.seoTitle: {{ post.seoMetaData.seoTitle }}</pre>
+        <pre>DEBUG: post.seoMetaData.metaDescription: {{ post.seoMetaData.metaDescription }}</pre>
+        <pre>DEBUG: post.seoMetaData.canonicalUrl: {{ post.seoMetaData.canonicalUrl }}</pre>
         <pre>DEBUG: seo.seoTitle: {{ seo.seoTitle }}</pre>
         <pre>DEBUG: seo.metaDescription: {{ seo.metaDescription }}</pre>
         <pre>DEBUG: seo.canonicalUrl: {{ seo.canonicalUrl }}</pre>
-    {% else %}
-        <pre>DEBUG: Contentful SEO data (post.fields.seoMetaData) is NOT defined.</pre>
     {% endif %}
-    <pre>DEBUG: seo object (after assignment) exists: {{ seo is defined }}</pre>
     {# ✨ END DEBUG DUMP STATEMENTS ✨ #}
 
     {% set seoTitle = seo.seoTitle or metadata.title %}
