@@ -1,3 +1,8 @@
+// _data/getContentfulPages.js
+// This module fetches pages from Contentful and processes them.
+// It uses the Contentful client to retrieve entries of type 'composePage',
+// applies image parsing, and SEO parsing to the fields of each entry.  
+
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import parseSeo from '../_helpers/parseSeo.js';
@@ -12,10 +17,18 @@ export default async function getContentfulPages() {
     });
 
     return entries.items.map(item => {
+      // For each entry, extract the fields and parse the main image.
+      // The main image is wrapped in a specific structure, so we use a helper
+      // function to extract the URL and other properties.
+      // The parseImageWrapper function returns an object with the image URL
+      // and alt text, or null if no image is present.
       const fields = { ...item.fields };
       fields.mainImage = parseImageWrapper(fields.mainImage);
+
+      // If the entry has a 'seoMetaData' field, parse it for SEO properties. 
       if (fields.seoMetaData) {
-        fields.seo = parseSeo(fields.seoMetaData);
+        // fields.seo = parseSeo(fields.seoMetaData);
+        fields.seoMetaData = parseSeo(fields.seoMetaData);
       }
       return {
         ...fields,

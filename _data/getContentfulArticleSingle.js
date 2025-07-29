@@ -24,8 +24,10 @@ export default async function getContentfulArticleSingle() {
 
     const imageEntry = fields.mainImage || fields.image || null;
     fields.mainImage = parseImageWrapper(imageEntry);
+
+    // ✨ Add this block to process SEO for articles/promos ✨
     if (fields.seoMetaData) {
-      fields.seo = parseSeo(fields.seoMetaData);
+      fields.seoMetaData = parseSeo(fields.seoMetaData);
     }
 
     // This 'deck' processing might still be unnecessary if you only want a single article's fields.

@@ -1,3 +1,6 @@
+// _data/getContentfulPages.js
+// This module fetches pages from Contentful and processes them.    
+
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import parseSeo from '../_helpers/parseSeo.js';
@@ -15,7 +18,8 @@ export default async function getContentfulArticles() {
       const fields = { ...item.fields };
       fields.mainImage = parseImageWrapper(fields.mainImage);
       if (fields.seoMetaData) {
-        fields.seo = parseSeo(fields.seoMetaData);
+        // fields.seo = parseSeo(fields.seoMetaData);
+        fields.seoMetaData = parseSeo(fields.seoMetaData);
       }
       return {
         ...fields,

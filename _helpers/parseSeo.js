@@ -1,3 +1,8 @@
+// _helpers/parseSeo.js
+// This function parses SEO-related fields from an entry object
+// and returns an object with the relevant SEO properties.
+// It handles both the presence and absence of fields gracefully.
+
 export default function parseSeo(entry) {
   const fields = entry?.fields || {};
 

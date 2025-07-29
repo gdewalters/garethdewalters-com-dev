@@ -1,20 +1,53 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% set seo = post.seo or {} %}
+
+    {# UPDATED: Set 'seo' to check for data in post.fields.seo (for pages) or post.fields.seoMetaData (for articles/promos) #}
+    {% set seo = post.fields.seo or post.fields.seoMetaData or {} %}
+
+    {# ✨ CORRECTED DEBUG STATEMENTS - CHECKING EXISTENCE AND PRINTING PROPERTIES DIRECTLY ✨ #}
+    <pre>DEBUG: post exists: {{ post is defined }}</pre>
+    <pre>DEBUG: post.fields exists: {{ post.fields is defined }}</pre>
+    {% if post.fields is defined and post.fields.seoMetaData is defined %}
+        <pre>DEBUG: post.fields.seoMetaData.seoTitle: {{ post.fields.seoMetaData.seoTitle }}</pre>
+        <pre>DEBUG: post.fields.seoMetaData.metaDescription: {{ post.fields.seoMetaData.metaDescription }}</pre>
+        <pre>DEBUG: post.fields.seoMetaData.canonicalUrl: {{ post.fields.seoMetaData.canonicalUrl }}</pre>
+        <pre>DEBUG: seo.seoTitle: {{ seo.seoTitle }}</pre>
+        <pre>DEBUG: seo.metaDescription: {{ seo.metaDescription }}</pre>
+        <pre>DEBUG: seo.canonicalUrl: {{ seo.canonicalUrl }}</pre>
+    {% else %}
+        <pre>DEBUG: Contentful SEO data (post.fields.seoMetaData) is NOT defined.</pre>
+    {% endif %}
+    <pre>DEBUG: seo object (after assignment) exists: {{ seo is defined }}</pre>
+    {# ✨ END DEBUG DUMP STATEMENTS ✨ #}
+
     {% set seoTitle = seo.seoTitle or metadata.title %}
     {% set seoDescription = seo.metaDescription or metadata.description %}
     <title>{{ seoTitle }}</title>
     <meta name="description" content="{{ seoDescription }}" />
     <link rel="canonical" href="{{ seo.canonicalUrl or metadata.url }}" />
-    <meta name="robots" content="{{ seo.seoNoIndex ? 'noindex' : 'index' }},{{ seo.seoNoFollow ? 'nofollow' : 'follow' }}" />
     <meta property="og:title" content="{{ seo.openGraphTitle or seoTitle }}" />
     <meta property="og:description" content="{{ seo.openGraphDescription or seoDescription }}" />
-    {% if seo.openGraphImage and seo.openGraphImage.fields and seo.openGraphImage.fields.file %}
-    <meta property="og:image" content="https:{{ seo.openGraphImage.fields.file.url }}" />
+
+    {# Access properties directly on 'seo' as parseSeo flattens the object #}
+    {# Using if blocks to debug "expected block end in set statement" error #}
+    {% set robotsIndex = 'index' %}
+    {% if seo.seoNoIndex %}
+      {% set robotsIndex = 'noindex' %}
+    {% endif %}
+
+    {% set robotsFollow = 'follow' %}
+    {% if seo.seoNoFollow %}
+      {% set robotsFollow = 'nofollow' %}
+    {% endif %}
+    <meta name="robots" content="{{ robotsIndex }},{{ robotsFollow }}" />
+
+    {# Check if openGraphImage exists (it will be the parsed image object from parseSeo) and has a url #}
+    {% if seo.openGraphImage and seo.openGraphImage.url %}
+    <meta property="og:image" content="https:{{ seo.openGraphImage.url }}" />
     {% endif %}
     {% if seo.openGraphType %}<meta property="og:type" content="{{ seo.openGraphType }}" />{% endif %}
     {% if seo.openGraphLocale %}<meta property="og:locale" content="{{ seo.openGraphLocale }}" />{% endif %}

@@ -1,4 +1,7 @@
-// _data/helpers/contentfulClient.js
+// _data/helpers/contentfulClient.js    
+// This file sets up the Contentful client using environment variables
+// It exports the client for use in other parts of the application.
+
 import { createClient } from 'contentful';
 import 'dotenv/config'; // Ensure dotenv is configured to load your env vars
 
