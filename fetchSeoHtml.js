@@ -40,8 +40,8 @@ async function run() {
     if (seo.openGraphDescription) {
       tags.push(`<meta property="og:description" content="${seo.openGraphDescription}">`);
     }
-    if (seo.openGraphImage?.fields?.file?.url) {
-      tags.push(`<meta property="og:image" content="https:${seo.openGraphImage.fields.file.url}">`);
+    if (seo.openGraphImage?.url) {
+      tags.push(`<meta property="og:image" content="https:${seo.openGraphImage.url}">`);
     }
     if (seo.openGraphType) {
       tags.push(`<meta property="og:type" content="${seo.openGraphType}">`);
