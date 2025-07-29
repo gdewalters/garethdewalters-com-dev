@@ -3,6 +3,8 @@
 // and returns an object with the relevant SEO properties.
 // It handles both the presence and absence of fields gracefully.
 
+import parseImageWrapper from './parseImageWrapper.js';
+
 export default function parseSeo(entry) {
   const fields = entry?.fields || {};
 
@@ -14,7 +16,7 @@ export default function parseSeo(entry) {
     seoNoFollow: fields.seoNoFollow ?? null,
     openGraphTitle: fields.openGraphTitle || null,
     openGraphDescription: fields.openGraphDescription || null,
-    openGraphImage: fields.openGraphImage || null,
+    openGraphImage: parseImageWrapper(fields.openGraphImage),
     openGraphType: fields.openGraphType || null,
     openGraphLocale: fields.openGraphLocale || null,
   };
