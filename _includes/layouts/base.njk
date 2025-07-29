@@ -1,49 +1,25 @@
+{% set seo = post.seo or post.seoMetaData or {} %}
+{% set seoTitle = seo.seoTitle or metadata.title %}
+{% set seoDescription = seo.metaDescription or metadata.description %}
+{% set robotsIndex = 'index' %}
+{% if seo.seoNoIndex %}
+  {% set robotsIndex = 'noindex' %}
+{% endif %}
+{% set robotsFollow = 'follow' %}
+{% if seo.seoNoFollow %}
+  {% set robotsFollow = 'nofollow' %}
+{% endif %}
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    {# UPDATED: Set 'seo' to check for data in post.fields.seo (for pages) or post.fields.seoMetaData (for articles/promos) #}
-    {% set seo = post.seo or post.seoMetaData or {} %}
-
-    {# ✨ CORRECTED DEBUG STATEMENTS - CHECKING EXISTENCE AND PRINTING PROPERTIES DIRECTLY ✨ #}
-    <pre>DEBUG: post exists: {{ post is defined }}</pre>
-    <pre>DEBUG: post.seoMetaData exists: {{ post.seoMetaData is defined }}</pre>
-
-    {% if post is defined and post.seoMetaData is defined %}
-        <pre>DEBUG: post.seoMetaData.seoTitle: {{ post.seoMetaData.seoTitle }}</pre>
-        <pre>DEBUG: post.seoMetaData.metaDescription: {{ post.seoMetaData.metaDescription }}</pre>
-        <pre>DEBUG: post.seoMetaData.canonicalUrl: {{ post.seoMetaData.canonicalUrl }}</pre>
-        <pre>DEBUG: seo.seoTitle: {{ seo.seoTitle }}</pre>
-        <pre>DEBUG: seo.metaDescription: {{ seo.metaDescription }}</pre>
-        <pre>DEBUG: seo.canonicalUrl: {{ seo.canonicalUrl }}</pre>
-    {% endif %}
-    {# ✨ END DEBUG DUMP STATEMENTS ✨ #}
-
-    {% set seoTitle = seo.seoTitle or metadata.title %}
-    {% set seoDescription = seo.metaDescription or metadata.description %}
     <title>{{ seoTitle }}</title>
     <meta name="description" content="{{ seoDescription }}" />
     <link rel="canonical" href="{{ seo.canonicalUrl or metadata.url }}" />
     <meta property="og:title" content="{{ seo.openGraphTitle or seoTitle }}" />
     <meta property="og:description" content="{{ seo.openGraphDescription or seoDescription }}" />
-
-    {# Access properties directly on 'seo' as parseSeo flattens the object #}
-    {# Using if blocks to debug "expected block end in set statement" error #}
-    {% set robotsIndex = 'index' %}
-    {% if seo.seoNoIndex %}
-      {% set robotsIndex = 'noindex' %}
-    {% endif %}
-
-    {% set robotsFollow = 'follow' %}
-    {% if seo.seoNoFollow %}
-      {% set robotsFollow = 'nofollow' %}
-    {% endif %}
     <meta name="robots" content="{{ robotsIndex }},{{ robotsFollow }}" />
-
-    {# Check if openGraphImage exists (it will be the parsed image object from parseSeo) and has a url #}
     {% if seo.openGraphImage and seo.openGraphImage.url %}
     <meta property="og:image" content="https:{{ seo.openGraphImage.url }}" />
     {% endif %}
@@ -77,26 +53,18 @@
         </div>
       </div>
     </header>
-
     <main id="site-content" class="pt-32 pb-20 relative overflow-hidden px-8" role="main" tabindex="-1">
-
       {% block content %}
         {{ content | safe }}
       {% endblock %}
-
     </main>
-
     {% include "patterns/page-footer.njk" %}
-
     <!-- Mobile Navigation Overlay -->
     <div class="fixed inset-0 z-40 translate-x-full transform bg-white transition-transform duration-300 ease-in-out">
       <div class="flex h-full flex-col items-center justify-center space-y-8 p-8">
-
         {% include "patterns/nav-main-mobile.njk" %}
-
       </div>
     </div>
-
     <!-- JavaScript for interactive elements -->
     <script src="/assets/scripts/bundle.js"></script>
   </body>
