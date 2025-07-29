@@ -7,7 +7,8 @@ import { parse, stringify } from 'flatted';
 
 export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
   const cacheDir = path.resolve('.cache');
-  const cacheFile = path.join(cacheDir, `${key}.json`);
+  const sanitizedKey = encodeURIComponent(key);
+  const cacheFile = path.join(cacheDir, `${sanitizedKey}.json`);
   const now = Date.now();
 
   if (fs.existsSync(cacheFile)) {
