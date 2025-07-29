@@ -11,5 +11,8 @@
     layout: "layouts/home.njk",
     title: "My home page",
     permalink: "/index.html",
+    eleventyComputed: {
+        post: async (data) => data.getContentfulPageHome
+    },
 }
 ---

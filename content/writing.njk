@@ -11,6 +11,9 @@
     layout: "layouts/base.njk",
     title: "My Writing",
     permalink: "/writing/index.html",
+    eleventyComputed: {
+        post: async (data) => data.getContentfulPageWriting
+    },
 }
 ---
 
