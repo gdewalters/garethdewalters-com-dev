@@ -23,6 +23,8 @@ import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 
+import { getContentfulPageBySlug } from './_data/getContentfulPageBySlug.js';
+
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -210,7 +212,6 @@ export default async function(eleventyConfig) {
 		}
 		]
 	});
-
 
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);

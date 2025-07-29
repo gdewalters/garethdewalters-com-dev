@@ -1,4 +1,18 @@
 {% set seo = post.seo or post.seoMetaData or {} %}
+    {# ✨ DEBUG STATEMENTS TO INSPECT SEO DATA FLOW ✨ #}
+    <pre>DEBUG: post exists: {{ post is defined }}</pre>
+    <pre>DEBUG: post.seoMetaData exists: {{ post.seoMetaData is defined }}</pre>
+    
+    {% if post is defined and post.seoMetaData is defined %}
+        <pre>DEBUG: post.seoMetaData.seoTitle: {{ post.seoMetaData.seoTitle }}</pre>
+        <pre>DEBUG: post.seoMetaData.metaDescription: {{ post.seoMetaData.metaDescription }}</pre>
+        <pre>DEBUG: post.seoMetaData.canonicalUrl: {{ post.seoMetaData.canonicalUrl }}</pre>
+        <pre>DEBUG: seo.seoTitle: {{ seo.seoTitle }}</pre>
+        <pre>DEBUG: seo.metaDescription: {{ seo.metaDescription }}</pre>
+        <pre>DEBUG: seo.canonicalUrl: {{ seo.canonicalUrl }}</pre>
+    {% endif %}
+    <pre>DEBUG: seo object (after assignment) exists: {{ seo is defined }}</pre>
+    {# ✨ END DEBUG STATEMENTS ✨ #}
 {% set seoTitle = seo.seoTitle or metadata.title %}
 {% set seoDescription = seo.metaDescription or metadata.description %}
 {% set robotsIndex = 'index' %}

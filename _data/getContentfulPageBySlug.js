@@ -36,7 +36,10 @@ export async function getContentfulPageBySlug(slug) {
       fields.seoMetaData = parseSeo(fields.seoMetaData);
     }
 
-    return { ...fields, sys: item.sys };
+    return {
+      ...fields,
+      sys: item.sys
+    };
   };
 
   try {
