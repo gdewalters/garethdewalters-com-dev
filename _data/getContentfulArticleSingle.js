@@ -2,7 +2,7 @@
 // This module fetches a single article entry from Contentful, specifically for the promo article.
 // It includes error handling and caching for performance.
 // It also processes the main image and deck content if available.
-// Note: The entry ID is hardcoded for testing purposes; it should be replaced with an environment variable in production.   
+// Note: The slug is hardcoded for testing purposes; it should be replaced with an environment variable in production.
 
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
@@ -10,17 +10,23 @@ import parseSeo from '../_helpers/parseSeo.js';
 import cachedFetch from '../_helpers/cache.js';
 
 export default async function getContentfulArticleSingle() {
-  // const entryId = process.env.PROMO_ARTICLE_ENTRY_ID;
-  const entryId = '5Xdx6Pcqw8f75JSERlMMJh'; // For testing purposes, replace with actual environment variable in production
-
-  if (!entryId) {
-    console.warn('PROMO_ARTICLE_ENTRY_ID environment variable is not set.');
-    return null;
-  }
+  const slug = 'promo-article-slug';
 
   const fetcher = async () => {
-    const entry = await client.getEntry(entryId, { include: 3 });
-    const fields = { ...entry.fields };
+    const entries = await client.getEntries({
+      content_type: 'composeArticle',
+      'fields.slug': slug,
+      include: 3,
+      limit: 1,
+    });
+
+    if (!entries.items.length) {
+      console.warn(`No composeArticle found with slug ${slug}`);
+      return null;
+    }
+
+    const item = entries.items[0];
+    const fields = { ...item.fields };
 
     const imageEntry = fields.mainImage || fields.image || null;
     fields.mainImage = parseImageWrapper(imageEntry);
@@ -43,13 +49,13 @@ export default async function getContentfulArticleSingle() {
       return null;
     }).filter(Boolean);
 
-    return { ...fields, deckContent: deck, sys: entry.sys };
+    return { ...fields, deckContent: deck, sys: item.sys };
   };
 
   try {
-    return await cachedFetch(`cardDeck_${entryId}`, fetcher);
+    return await cachedFetch(`promoArticle_${slug}`, fetcher);
   } catch (error) {
-    console.error('Error fetching card deck entry:', error);
+    console.error(`Error fetching composeArticle with slug ${slug}:`, error);
     return null;
   }
 }
