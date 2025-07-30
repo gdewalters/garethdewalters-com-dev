@@ -39,7 +39,7 @@ layout: layouts/base.njk
           
             <!-- Article description / lede paragraph -->
             <p class="text-foreground text-xl font-medium max-w-2xl mx-auto mb-8 text-left sm:text-center">
-              {{ post.standfirst }}
+              {{ post.summary | safe }}
             </p>
 
             <!-- Main image -->
