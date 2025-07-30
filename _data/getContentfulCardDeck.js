@@ -7,7 +7,7 @@ import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import cachedFetch from '../_helpers/cache.js';
 
 export default async function getContentfulCardDeck() {
-  const entryId = process.env.CARD_DECK_ENTRY_ID;
+  const entryId = process.env.HOME_CARD_DECK_ENTRY_ID;
   if (!entryId) {
     console.warn('CARD_DECK_ENTRY_ID environment variable is not set.');
     return null;
