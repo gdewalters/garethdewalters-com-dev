@@ -1,3 +1,7 @@
+// _data/getContentfulCardDeck.js
+// This module fetches a card deck entry from Contentful.
+// It processes the deck content, which can include articles and cards.   
+
 import client from '../_helpers/contentfulClient.js';
 import parseImageWrapper from '../_helpers/parseImageWrapper.js';
 import cachedFetch from '../_helpers/cache.js';
