@@ -22,7 +22,11 @@ layout: layouts/base.njk
         <div class="animate-scale-in relative">
           <div class="overflow-hidden rounded-lg">
             <a href="/writing/{{ featuredPromo.link.fields.slug }}/" class="">
-              <img src="{{ featuredPromo.mainImage.url }}" alt="{{ featuredPromo.mainImage.alt }}" class="h-[500px] w-full object-cover transition-transform duration-700 ease-in-out hover:scale-105" />
+              <img
+                src="{{ featuredPromo.mainImage.url }}"
+                alt="{{ featuredPromo.mainImage.alt }}"
+                class="w-full aspect-video lg:h-[500px] object-cover transition-transform duration-700 ease-in-out hover:scale-105"
+              />
             </a>
           </div>
           {% if featuredPromo.mainImage.photographer %}
@@ -73,7 +77,9 @@ layout: layouts/base.njk
             <div class="p-6">
               {% if article.contentTopicTag %}
               <div class="mb-3">
-                <span class="text-primary text-xs font-medium tracking-wider uppercase"> {{ article.contentTopicTag.fields.entryTitle }} </span>
+                <span class="text-huntergreen text-xs font-semibold tracking-wider uppercase"> 
+                  {{ article.contentTopicTag.fields.entryTitle }}
+                </span>
               </div>
               {% endif %}
               <h3 class="mb-3 font-serif text-xl font-medium">{{ article.headline }}</h3>
