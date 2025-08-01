@@ -11,10 +11,16 @@ export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
   const cacheFile = path.join(cacheDir, `${sanitizedKey}.json`);
   const now = Date.now();
 
-  if (fs.existsSync(cacheFile)) {
+  const skipCache =
+    process.env.SKIP_CACHE === 'true' ||
+    process.env.NODE_ENV === 'production' ||
+    process.env.CONTEXT === 'production';
+  const ttl = Number(process.env.CACHE_TTL_SECONDS) || ttlSeconds;
+
+  if (!skipCache && fs.existsSync(cacheFile)) {
     try {
       const { timestamp, payload } = parse(fs.readFileSync(cacheFile, 'utf8'));
-      if (now - timestamp < ttlSeconds * 1000) {
+      if (now - timestamp < ttl * 1000) {
         return payload;
       }
     } catch {
@@ -23,9 +29,13 @@ export default async function cachedFetch(key, fetcher, ttlSeconds = 3600) {
   }
 
   const payload = await fetcher();
-  if (!fs.existsSync(cacheDir)) {
-    fs.mkdirSync(cacheDir, { recursive: true });
+
+  if (!skipCache) {
+    if (!fs.existsSync(cacheDir)) {
+      fs.mkdirSync(cacheDir, { recursive: true });
+    }
+    fs.writeFileSync(cacheFile, stringify({ timestamp: now, payload }), 'utf8');
   }
-  fs.writeFileSync(cacheFile, stringify({ timestamp: now, payload }), 'utf8');
+
   return payload;
 }
