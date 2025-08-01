@@ -5,18 +5,25 @@
 import { createClient } from 'contentful';
 import 'dotenv/config'; // Ensure dotenv is configured to load your env vars
 
-const spaceId = process.env.CONTENTFUL_SPACE_ID;
-const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
-const environment = process.env.CONTENTFUL_ENVIRONMENT || 'master';
+const {
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_ENVIRONMENT,
+} = process.env;
 
-if (!spaceId || !accessToken) {
-  throw new Error('Contentful credentials (SPACE_ID, ACCESS_TOKEN) are required.');
+if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
+  console.warn(
+    'Missing Contentful credentials. Set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN in your environment variables.'
+  );
 }
 
-const client = createClient({
-  space: spaceId,
-  accessToken: accessToken,
-  environment: environment,
-});
+const client =
+  CONTENTFUL_SPACE_ID && CONTENTFUL_ACCESS_TOKEN
+    ? createClient({
+        space: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
+        environment: CONTENTFUL_ENVIRONMENT || 'master',
+      })
+    : null;
 
 export default client;
