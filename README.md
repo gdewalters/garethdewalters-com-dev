@@ -46,8 +46,8 @@ A personal website built with [Eleventy](https://www.11ty.dev/) that pulls conte
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/gdewalters/eleventy-contentful-demo.git
-   cd eleventy-contentful-demo
+   git clone https://github.com/gdewalters/gdewalters-com.git
+   cd gdewalters-com
    ```
 
 2. **Install dependencies**
