@@ -145,7 +145,7 @@ npx @11ty/eleventy --serve
 
 ## License
 
-This project is licensed under the **ISC License**. See the `LICENSE` file (if provided) for details.
+This code for this project is licensed under the **ISC License**. See the `LICENSE` file for details.
 
 ---
 
