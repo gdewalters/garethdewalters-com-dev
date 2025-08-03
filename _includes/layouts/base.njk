@@ -32,9 +32,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png?v={% version %}">
     <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg?v={% version %}" color="#5bbad5">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico?v={% version %}">
+    {% if env.nodeEnv == "production" and env.gtmId %}
+      {% include "patterns/google-tag-manager.njk" %}
+    {% endif %}
   </head>
 
   <body class="bg-background text-foreground antialiased">
+    {% if env.nodeEnv == "production" and env.gtmId %}
+      {% include "patterns/google-tag-manager.njk" %}
+    {% endif %}
 
     <header class="fixed top-0 right-0 left-0 z-50 bg-transparent py-8 px-8 transition-all duration-300 ease-in-out">
       <div class="w-full max-w-7xl mx-auto">
